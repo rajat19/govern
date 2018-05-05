@@ -1,0 +1,72 @@
+# Top 250 Expected
+## 1 to 10
+- Article 164(1)
+	- Chief minister appointed by governor
+	- UP has 2 deputy CMs
+- ICEGATE
+	- e-commerce portal of Central Board of Excise & Custom
+- Import of major arms
+	- **India largest importer**
+	- Russia exports to india most
+	- USA largest exporter
+- Project Unnati
+	- Ministry of shipping
+	- a port transformation project
+	- focus is on 12 major ports
+- Clean Seas Campaign
+	- **New zealand** recently joined
+	- Aims to engage gov., general public, civil society and private sector in fight against marine plastic
+- CIPAM
+	- Cell for IPR Promotion and Mgtt.
+	- slogan - **Creative India, Innovative India**
+- Energy transition index
+	- Released by **World Economic Forum**
+	- List topped by Sweden
+	- India at 78/114
+- North East Special Infrastructure Development Scheme
+	- Completely funded by GOI
+	- launched for 2017 to 2020
+	- Funds distributed to 8 NE states
+- Citizen Services' app
+	- Launched by NCRB
+	- bouquet of 9 police related services, for citizen
+	- **SOS provision** is made available to send emergency messages to friends and family
+- Cyber Gram Project
+	- Launched by **Ministry of Minority Affairs**
+	- Digital literacy in a minority dominated village of **Chandauli** in Alwar, Rajasthan
+
+## 11 to 20
+- E-office
+	- Under **Department of Administrative Reforms**
+	- Ministry of Personal Public Grievances and Pension
+- International Criminal Court
+	- Established after Rome statute 1/7/02
+	- Center at Hague
+	- **India not a party**
+	- Arabic, Chinese, English, French, Russia, Spanish
+- Newton Bhabha Fund
+	- Help by UK
+	- 3 categories
+		- People
+		- Programmes
+		- Translation
+- 80:20 Gold scheme
+	- introduced with aim of curbing gold imports
+	- policy was aimed at tackling the widening current account deficit
+- Double Taxation Avoidance Agreement
+	- Taxpayer resides in one country and earns in other country
+- Base erosion and profit sharing
+	- refers to tax planning strategies that exploit gaps and mismatches in tax rules to artificially shift profits to low or no-tax locations where there is little or no economic activity
+	- headed by OECD
+- UN Commision on Status of Women
+	- Funcitonal commision of EcoSoc established in 1946
+	- Rural entrepreneur Sunita Kashyap was hailed as a symbol of Women's empowerment of 62nd UNCOSOW 2018
+- LaQshya Programme
+	- reduce preventable maternal and newborn mortality, morbidity and stillbirths
+- Global Theatre Olympics
+	- Delhi would host
+	- Organised by ministry of culture
+- World Happiness Report
+	- released by **Sustainable Developer Solution Network**
+	- Finland 1st
+	- india 133/156
