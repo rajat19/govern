@@ -70,3 +70,31 @@
 	- released by **Sustainable Developer Solution Network**
 	- Finland 1st
 	- india 133/156
+	- Burundi last
+
+## 21 to 30
+- Intangible Cultural Heritage
+	- Created by UNESCO
+	- Yoga and Nawrouz in 2016
+	- Kumbhmelad added in 2017 -> making total 13
+- Ministry of culture runs
+	- Performing Arts Grants Scheme
+	- National Memorial Scheme
+	- Scheme for Cultural Heritage Youth Leadership Programme
+- National Building Construction Corporation is nodal agency for projects under 
+	- Pradhan Mantri Gram Sadak Yojana
+	- Development work in NE Region
+	- Solid Waster Management
+	- Jawaharlal Nehru National Urban Renewal Mission
+- National Commission for Protection of child rights
+	- It is a statutory body
+	- under commision for protection for child rights
+	- under **Ministry of Women and child**
+	- children are under age of 18
+- Dark matter
+	- type of matter which has not yet been directly observed, but its thought to form a fundamental part of the universe
+- Dark energy
+	- a theoretical form of energy postulated to act in opposition of gravity and to occupy the entire universe, accounting for most of the energy in it and causing its expansion to accelerate
+- Black hole
+	- a region of space having a gravitational field so intense that no matter or radiation can escape
+- 
