@@ -148,3 +148,39 @@
 |Stored With|RBI(in their premises)|Bank themselves|
 |Ratio comparison|Less than SLR|More than CRR|
 |Current Rates|4%|21.5%|
+
+---
+## Liquidity Adjustment Facility
+- This is the primary instrument of RBI for modulating liquidity and sending interest rate signals to the market
+- It refers to the difference b/w the two key rates
+	- repo rate
+	- reverse repo rate
+- Also known as **Liquidity Corridor**
+- While repo infuses liquidity into the system, reverse repo absorbs liquidity from system
+- **RBI just announces Repo Rate**
+- **Reverse repo rate is linked to repo rate and is 100 basis points (1%) below repo rate**
+
+---
+## Marginal Standing Facility
+- Created by **`RBI in its credit policy of may 2011`**
+- MSF is the rate at which banks are able to borrow overnight funds from RBI against apporved government securities
+- **MSF is always 1% higher than Repo rate**
+
+---
+## Qualitative Tools
+- Those tools thru which the central bank not only controls the value of loans but also the purpose for which these loans are assigned by the commercial banks
+	- Moral suasion
+	- Rationing of credit
+	- Direct Action
+	- Margin requirements
+
+#### Moral Suasion
+- Suasion means request or persuasion
+- To arrest inflationary situation central bank persuades and requests the commercial banks to refrain from giving loans for speculative and non-essential purposes
+- To counter deflation, central bank persuades the commercial banks to extend credit for different purposes
+- Periodic discussions are held with authorities of commercial banks in this respect from 1949
+
+#### Rationing of Credit
+- Method by which the RBI seeks to limit the maximum amount of loans and advances
+- Also in certain cases, fix ceiling for specific categories of loans and advances
+- **Priority Sector Landing** - making credit flow to certain priority or weaker sectorsnby charging concessional rates of interest
