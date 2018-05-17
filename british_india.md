@@ -19,7 +19,7 @@
 	- Unsympathetic and hostile attitude of many native rulers
 	- Non-participation of educated Indians
 	- Lack of organization, discipline and a political perspective
-	- Superior Britihs military strength
+	- Superior British military strength
 - Consequences
 	- Company rule abolished
 	- British crown took over through the **Queen's Proclaimation**
@@ -51,7 +51,7 @@
 - Appointment of Secretary of state for India
 
 ## Indian Councils Act 1892
-- Enlarged Supreme and Provincial Councilas
+- Enlarged Supreme and Provincial Councils
 - Empowered the members to discuss the budget and ask questions on matters of public interests
 - Did not allow Right of electing representatives
 - Followed by
@@ -67,7 +67,7 @@
 - Indian Councils Act 1909
 - introduced element of direct elections to the legislative councils
 - introduced communal electorate
-- partition of bengal in Dev. 1911
+- partition of bengal in Dec. 1911
 
 ## Home Rule Movement
 - Annie Besant and Tilak started Home Rule League seperately
