@@ -1,2 +1,4 @@
 private/
 *.pdf
+pdf/
+*.private.*

@@ -7,7 +7,7 @@
 ## Chang La Pass
 - elevation of over 5300 m
 - connects **Indus valley** to **Pangong Lake** region
-- **`Changtang plateau is known for its high altitude giant lakes and vast highlands of great himalayas`**
+- **Changtang plateau is known for its high altitude giant lakes and vast highlands of great himalayas**
 
 ## Karakoram Pass
 - elevation of 4694 m
@@ -40,7 +40,7 @@
 ## Shipki La Pass
 - Indo-Tibet border
 - Located in **Kinnaur district** in **Himachal Pradesh**
-- **`Sutlej river enters India through this pass`**
+- **Sutlej river enters India through this pass**
 
 ## Pir Panjal Pass
 - connects **Kullu Valley** with **Lahaul Valley** and **Spiti Valley** of Himachal Pradesh

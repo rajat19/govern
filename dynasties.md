@@ -18,13 +18,13 @@
 
 ## Maurya Dynasty
 * Chandragupta Maurya
-	* `Mudraraksha` is written by Vishakadatta about chandragupta
-	* Megasthenese wrote `Indica`
-	* Kautilya wrote `Arthashastra`
+	* **Mudraraksha** is written by Vishakadatta about chandragupta
+	* Megasthenese wrote **Indica**
+	* Kautilya wrote **Arthashastra**
 * Bindusar
 * Ashoka
 	* **Kalinga War** 261 BC
-	* `Devnama Priya Darshi Raja`
+	* **Devnama Priya Darshi Raja**
 	* Single lion capital
 		* Rampurva
 		* Lavriya
@@ -44,21 +44,21 @@
 	* Oppressive rule
 	* New knowledge on outlyinh area
 	* Neglect of North-west frontier
-	* `Destroyed by Pushyamitra Sunga`
+	* **Destroyed by Pushyamitra Sunga**
 
 ## Central Asia
 * Indo Greeks
 	* Ruled Bactria
 	* Menander
 		* Had his capital at sialkot
-	* First to **`issue coins which can be definitely attributed to kings`**
+	* First to **issue coins which can be definitely attributed to kings****
 * Shakas
 	* Maves
 		* first king
 	* Rudra Daman
 		* most famous ruler
-		* `Defeated Satavahana`
-	* `Defeated by Vikramaditya`
+		* **Defeated Satavahana**
+	* **Defeated by Vikramaditya**
 * Parthians
 	* earlier lived in Iran
 	* Gondohernes
@@ -73,16 +73,16 @@
 		* most famous ruler
 		* started **Saka era** AD 78
 	* Gandhara school of art with indian tradition and greek techniques received royal patronage
-	* **`Issued gold coins with higher degree of metallic purity than in Gupta gold coins`**
+	* **Issued gold coins with higher degree of metallic purity than in Gupta gold coins****
 * Satavahana
 	* Succeeded Mauryas in central india
 	* Simuka
 		* founder
-		* `Destroyed Sunga`
+		* **Destroyed Sunga**
 	* Gautamiputra Satakarni
 		* greatest ruler
 	* Hala
-		* Wrote `Gathasaptsati` in Prakrit
+		* Wrote **Gathasaptsati** in Prakrit
 	* Buddhist temple
 		* Called Chaitya
 		* Most famous at Karle
@@ -110,7 +110,7 @@
 		* greatest king
 		* founded Puhar
 	* Maintained navy
-	* `Wiped out by Pallavas`
+	* **Wiped out by Pallavas**
 * Cheras
 	* Emblem - Bow
 	* Capital
@@ -127,30 +127,30 @@
 * Srigupta
 	* founder
 * Mahendragupta I
-	* first gupta ruler to assume the title of `maharajadhiraj`
+	* first gupta ruler to assume the title of **maharajadhiraj**
 * Samudragupta
 	* believed in policy of violence and conquest
 	* Harisena wrote allahabad inscription
-	* Adopted the title of `kaviraj`
+	* Adopted the title of **kaviraj**
 * Chandragupta II
-	* **`first gupta ruler to issue silver coin`**
+	* **first gupta ruler to issue silver coin****
 	* extended limits of empire by marriage, alliances and conquest
 	* made Ujjain as capital
 	* Fa-hien visited India
-	* Adopted the title of `vikramaditya`
+	* Adopted the title of **vikramaditya**
 * Kumargupta I
-	* Adopted the title of `mahendraditya`
+	* Adopted the title of **mahendraditya**
 	* worshipped god kartikeya
 	* Founded the **monastry at Nalanda**
 * Skandagupta
 	* Hunas invaded India but were repelled by him
 * Administration
-	* The most important officers were the `kumaramatyas`
-	* kingdom was divided into provinces(bhukti), managed by `upaika`
-	* bhuktis were divided into district(vishayas), managed by `vishyaptai`
+	* The most important officers were the **kumaramatyas**
+	* kingdom was divided into provinces(bhukti), managed by **upaika**
+	* bhuktis were divided into district(vishayas), managed by **vishyaptai**
 	* guilds were given considerable shares
 	* grant of fiscal and administrative concessions to priests and administrators
-	* Guptas issued largest number of gold coins which were called `Dinars`
+	* Guptas issued largest number of gold coins which were called **Dinars**
 * Society
 	* Brahamanas claimed many privileges
 	* position of Sudras improved
@@ -158,10 +158,10 @@
 	* polygamy was common
 	* idol worship
 * Kalidasa wrote
-	* Lyrics - `Ritusambara and Meghduta`
-	* Dramas - `Abhigyan Shakuntalam, Vikramovashi and Malvikagnimitra`
-	* Epics  - `Kumasambhava and Raghuvamsha`
-* Aryabhatta wrote `Aryabhattca`
+	* Lyrics - **Ritusambara and Meghduta**
+	* Dramas - **Abhigyan Shakuntalam, Vikramovashi and Malvikagnimitra**
+	* Epics  - **Kumasambhava and Raghuvamsha**
+* Aryabhatta wrote **Aryabhattca**
 * School of art
 	* Gandhara
 		* Influenced by roman and greeks
@@ -194,27 +194,27 @@
 			* shore temple at mahabalipuram
 * Chalukyas
 	* in northern maharashtra and berar
-	* `Satavahanas -> Vakatakas -> Chalukyas -> Rashtrakutas`
+	* **Satavahanas -> Vakatakas -> Chalukyas -> Rashtrakutas**
 	* Capital
 		* Vatapi
 	* Pulakesin II
-		* `defeated Harshavardhan` at Narmada
-		* `defeated Pallava King Mahendravarman I`
-		* `killed by Narsimhavarman I`
+		* **defeated Harshavardhan** at Narmada
+		* **defeated Pallava King Mahendravarman I**
+		* **killed by Narsimhavarman I**
 * Palas
 	* Gopala
 		* founder
 	* Dharmapala
 	* Devapala
-		* `defeated by Rashtrakuta ruler Dhruva`
-		* `defeated by Pratihara king Nagabhatta II`
+		* **defeated by Rashtrakuta ruler Dhruva**
+		* **defeated by Pratihara king Nagabhatta II**
 * Pratiharas
 	* also called Gujara-Pratiharas
 	* Mihir Bhoja
 		* founder
 		* greatest ruler
 		* devotee of Vishnu
-		* adopted the title `Adivaraha`
+		* adopted the title **Adivaraha**
 * Rashtrakutas
 	* Dantidurga
 		* founder
@@ -227,15 +227,15 @@
 		* greatest ruler
 		* introduced caste hierarchy in bengal
 	* Lakshmansena
-		* `defeated Jayachandra of Gahadavala`
-		* `Muhammad Khilji` invaded Bengal during his reign
+		* **defeated Jayachandra of Gahadavala**
+		* **Muhammad Khilji** invaded Bengal during his reign
 * Gahadavalas
 	* Chandradeva
 		* first great ruler
-		* made `Kannauj` his capital
+		* made **Kannauj** his capital
 	* Jayachandra
-		* `defeated by Lakshmansena`
-		* `killed by Mohammad Ghori` (Battle of Chandawar)
+		* **defeated by Lakshmansena**
+		* **killed by Mohammad Ghori** (Battle of Chandawar)
 * Paramars
 	* Bhoja Paramar
 		* greatest king
@@ -251,9 +251,9 @@
 		* founder Ajmer
 	* Prithviraj III
 		* great ruler
-		* Chanderbardai wrote `Prithviraj Raso`
-		* `defeated Mohammad Ghori`
-		* `defeated by Ghori` (Second battle of Tarain)
+		* Chanderbardai wrote **Prithviraj Raso**
+		* **defeated Mohammad Ghori**
+		* **defeated by Ghori** (Second battle of Tarain)
 * Medieval Cholas
 	* Vijayalaya
 		* founder
@@ -261,7 +261,7 @@
 		* built Siva temple of Rajarajeshwara at Tanjore
 	* Chola empire was divided into Mandlams(provinces)
 	* Mandlams were divided into Valanadu and Nadu
-	* **`Ur -> general assembly of village`**
-	* **`Sabha -> gathering of adult men`**
-	* **`Nagram -> gathering of trader and merchants`**
+	* **Ur -> general assembly of village****
+	* **Sabha -> gathering of adult men****
+	* **Nagram -> gathering of trader and merchants****
 	* nayanars and alvars existed

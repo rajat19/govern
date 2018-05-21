@@ -2,7 +2,7 @@
 ## British Constitution
 * Parliamentary form of government
 * Idea of single citizenship
-* Idea of `rule of law`
+* Idea of **rule of law**
 * Institution of Speaker and his/her role
 * Lawmaking procedure
 * Procedure established by law
@@ -13,7 +13,7 @@
 * Electoral College
 * Independence of the judiciary and seperation of powers among the three branches of government
 * Judicial Review
-* President as `supreme commander of armed forces`
+* President as **supreme commander of armed forces**
 * Equal Protection under law
 
 ## Irish Constitution
@@ -23,10 +23,10 @@
 * Freedom of trade and commerce within the country and between the states
 * Power of the national legislature to make laws for implementing treaties, even on matters outside normal federal jurisdiction
 * Concurrent list
-* Terminology for the `preamble`
+* Terminology for the **preamble**
 
 ## French Constitution
-* Ideals of `liberty, equality and fraternity`
+* Ideals of **liberty, equality and fraternity**
 
 ## Canadian Constitution
 * A quasi-federal form of government
@@ -127,7 +127,7 @@ List in the Constitution that categorise and tabulate bureaucratic activity and 
 * Validation of certains acts and regulations
 
 ## Schedule 10
-* `Anti-defection` provisions for `MP` and `Members of state legislatures`
+* **Anti-defection** provisions for **MP** and **Members of state legislatures**
 
 ## Schedule 11
 * Panchayat Raj
@@ -142,12 +142,12 @@ List in the Constitution that categorise and tabulate bureaucratic activity and 
 Power to issue writs is primarily a provision made to make available the Right to Constitutional Remedies to every citizen .
 
 ## Habeas Corpus
-- **`You must have the body`**
+- **You must have the body****
 - Bring the detained person before the court so as to enable the court to decide the validity, jurisdiction or justification for such detention
 - **Gopalan vs GoI**
 
 ## Quo Warranto
-- **`What is your authority`**
+- **What is your authority****
 - Used to judicially control executive action in the matter of making appointments to public offices under relevant statutory provisions
 
 ## Mandamus
@@ -155,7 +155,7 @@ Power to issue writs is primarily a provision made to make available the Right t
 - **Bombay Municipality vs Advance Builders**
 
 ## Certiorari
-- **`inform`**
+- **inform****
 - issued by Supreme Court (Art. 32)
 - issued by High Court (Art. 226)
 - direct inferior courts, tribunals or authorities

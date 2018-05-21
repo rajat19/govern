@@ -17,7 +17,7 @@
 - Challenged the Muslim petition law
 
 ## MC Mehta vs Union of India 1986
-- Enlarged the scope and sphere of Article 32 and Article 21 to incorporate the **`Right to healthy and pollution-free environment`**
+- Enlarged the scope and sphere of Article 32 and Article 21 to incorporate the **Right to healthy and pollution-free environment**
 
 ## Indra Sawhney vs Union of India 1992
-- Defined the `creamy layer` criteria and uphold the execution of the recommendations made by Mandal Commission
+- Defined the **creamy layer** criteria and uphold the execution of the recommendations made by Mandal Commission

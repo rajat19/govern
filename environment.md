@@ -11,7 +11,7 @@
 ## Prevention of Cruelty to Animal Act, 1960
 - prevent the infliction of unnecessary pain or suffering on animals
 - **Animal Board of India** was constituted under this act
-- **Supreme Court banned `Jalikattu`**
+- **Supreme Court banned Jalikattu**
 
 ## Wildlife Protection Act, 1972
 - protection of wildlife
