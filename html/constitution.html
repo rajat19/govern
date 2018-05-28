@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>constitution.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="influence-of-other-constitutions">Influence of other constitutions</h1>
+<h2 id="british-constitution">British Constitution</h2>
+<ul>
+<li>Parliamentary form of government</li>
+<li>Idea of single citizenship</li>
+<li>Idea of <strong>rule of law</strong></li>
+<li>Institution of Speaker and his/her role</li>
+<li>Lawmaking procedure</li>
+<li>Procedure established by law</li>
+</ul>
+<h2 id="us-constitution">US Constitution</h2>
+<ul>
+<li>US Bill of rights</li>
+<li>Federal Structure of government</li>
+<li>Electoral College</li>
+<li>Independence of the judiciary and seperation of powers among the three branches of government</li>
+<li>Judicial Review</li>
+<li>President as <strong>supreme commander of armed forces</strong></li>
+<li>Equal Protection under law</li>
+</ul>
+<h2 id="irish-constitution">Irish Constitution</h2>
+<ul>
+<li>Directive principles of state policy</li>
+</ul>
+<h2 id="australian-constitution">Australian Constitution</h2>
+<ul>
+<li>Freedom of trade and commerce within the country and between the states</li>
+<li>Power of the national legislature to make laws for implementing treaties, even on matters outside normal federal jurisdiction</li>
+<li>Concurrent list</li>
+<li>Terminology for the <strong>preamble</strong></li>
+</ul>
+<h2 id="french-constitution">French Constitution</h2>
+<ul>
+<li>Ideals of <strong>liberty, equality and fraternity</strong></li>
+</ul>
+<h2 id="canadian-constitution">Canadian Constitution</h2>
+<ul>
+<li>A quasi-federal form of government
+<ul>
+<li>a federal system with a strong central government</li>
+</ul>
+</li>
+<li>Distribution of powers between central government and state governments</li>
+</ul>
+<h2 id="constitution-of-the-soviet-union">Constitution of the Soviet Union</h2>
+<ul>
+<li>Fundamental Duties u/a 51-A</li>
+<li>A constitutionally mandated planning commission to oversee the development of the economy</li>
+</ul>
+<h2 id="other-constitutions">Other Constitutions</h2>
+<ul>
+<li>Germany
+<ul>
+<li>Emergency Provision</li>
+</ul>
+</li>
+<li>South Africa
+<ul>
+<li>Amendment of Constitution</li>
+</ul>
+</li>
+<li>Japan
+<ul>
+<li>Due procedure of law</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="important-articles">Important Articles</h1>
+<table>
+<thead>
+<tr>
+<th>Article</th>
+<th>Deals With</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Name and Territory of Union</td>
+</tr>
+<tr>
+<td>2</td>
+<td>New States Formation, Alteration of Boundaries etc.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Laws inconsistent with or in derogation of Fundamental Rights</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Right to Equality</strong></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Prohibition of Discrimination</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Equality in case of Public Employment</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Abolition of Untouchability</strong></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Abolition of Titles</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Right to Freedom</td>
+</tr>
+<tr>
+<td>19A</td>
+<td>Freedom of Speech &amp; Expression</td>
+</tr>
+<tr>
+<td>19D</td>
+<td>Right to move freely in India</td>
+</tr>
+<tr>
+<td>19G</td>
+<td>Freedom to practise any profession</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Right to Life and Personal Liberty</td>
+</tr>
+<tr>
+<td>21A</td>
+<td><strong>Right to Education</strong></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Prohibition of human trafficking and forced labour</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Prohibition of child labour</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Freedom to practise &amp; propagate religion freely</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Prohibition of Interests of Minorities</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Remedies for enforcement of Fundamental Rights</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Uniform Civil Code</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Seperation of Judiciary from Executive</td>
+</tr>
+<tr>
+<td>51A</td>
+<td><strong>Fundamental Duties</strong></td>
+</tr>
+<tr>
+<td>72</td>
+<td>Powers of President to Grant Pardons etc.</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Attorney-General of India</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Duties of PM</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Sessions of Parliament, Prorogation &amp; Dissolution</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Voting in Houses</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Powers and Privilege of MPs</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Salaries and Allowances of MPs</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Money Bills</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Budget</td>
+</tr>
+<tr>
+<td>148</td>
+<td>Comptroller and Auditor-General of India</td>
+</tr>
+<tr>
+<td>280</td>
+<td>Finance Commission</td>
+</tr>
+<tr>
+<td>312</td>
+<td>All India Services</td>
+</tr>
+<tr>
+<td>335</td>
+<td>SCs and STs claim to Services and Posts</td>
+</tr>
+<tr>
+<td>343</td>
+<td>Official Language</td>
+</tr>
+<tr>
+<td>352</td>
+<td>National Emergency</td>
+</tr>
+<tr>
+<td>356</td>
+<td>President's Rule</td>
+</tr>
+<tr>
+<td>360</td>
+<td>Financial Emergency</td>
+</tr>
+<tr>
+<td>368</td>
+<td>Ammendment of Constitution</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="schedules">Schedules</h1>
+<p>List in the Constitution that categorise and tabulate bureaucratic activity and policy of the government</p>
+<h2 id="learning-way">Learning Way</h2>
+<ul>
+<li>TEARS OF OLD PM</li>
+<li>territory</li>
+<li>emoluments</li>
+<li>affirmation/oaths</li>
+<li>rajya sabha</li>
+<li>scheduled areas</li>
+<li>other scheduled areas</li>
+<li>federal provisions</li>
+<li>official languages</li>
+<li>land reforms</li>
+<li>defection</li>
+<li>panchayat</li>
+<li>municipalities</li>
+</ul>
+<h2 id="schedule-1">Schedule 1</h2>
+<ul>
+<li><strong>Article 1 and 4</strong></li>
+<li>List the states and territories of india</li>
+<li>Lists any change to their borders and the laws used to make that change</li>
+</ul>
+<h2 id="schedule-2">Schedule 2</h2>
+<ul>
+<li>Lists the salaries of officials holding public offices, judges and CAG</li>
+</ul>
+<h2 id="schedule-3">Schedule 3</h2>
+<ul>
+<li>Forms of Oath</li>
+<li>Lists the oath of offices for elected officials and judges</li>
+</ul>
+<h2 id="schedule-4">Schedule 4</h2>
+<ul>
+<li>Details the allocation of seats in Rajya Sabha per state or ut</li>
+</ul>
+<h2 id="schedule-5">Schedule 5</h2>
+<ul>
+<li>Provides for administration and control of scheduled areas and schduled tribes</li>
+<li>These areas and tribes need special protection due to disadvantageous conditions</li>
+</ul>
+<h2 id="schedule-6">Schedule 6</h2>
+<ul>
+<li>Provisions made for administration of tribal areas in Assam, Meghalaya, Tripura and Mizoram</li>
+</ul>
+<h2 id="schedule-7">Schedule 7</h2>
+<ul>
+<li><strong>Article 246</strong></li>
+<li>The union, state and concurrent lists of responsibilities</li>
+</ul>
+<h2 id="schedule-8">Schedule 8</h2>
+<ul>
+<li><strong>Article 344(1) and 351</strong></li>
+<li>The official languages</li>
+</ul>
+<h2 id="schedule-9">Schedule 9</h2>
+<ul>
+<li>Validation of certains acts and regulations</li>
+<li>Land reforms</li>
+</ul>
+<h2 id="schedule-10">Schedule 10</h2>
+<ul>
+<li><strong>Anti-defection</strong> provisions for <strong>MP</strong> and <strong>Members of state legislatures</strong></li>
+</ul>
+<h2 id="schedule-11">Schedule 11</h2>
+<ul>
+<li>Panchayat Raj</li>
+<li>rural local government</li>
+</ul>
+<h2 id="schedule-12">Schedule 12</h2>
+<ul>
+<li>Municipalities</li>
+<li>urban local government</li>
+</ul>
+<hr>
+<h1 id="writs">Writs</h1>
+<p>Power to issue writs is primarily a provision made to make available the Right to Constitutional Remedies to every citizen .</p>
+<h2 id="habeas-corpus">Habeas Corpus</h2>
+<ul>
+<li><strong>You must have the body</strong></li>
+<li>Bring the detained person before the court so as to enable the court to decide the validity, jurisdiction or justification for such detention</li>
+<li><strong>Gopalan vs GoI</strong></li>
+</ul>
+<h2 id="quo-warranto">Quo Warranto</h2>
+<ul>
+<li><strong>What is your authority</strong></li>
+<li>Used to judicially control executive action in the matter of making appointments to public offices under relevant statutory provisions</li>
+</ul>
+<h2 id="mandamus">Mandamus</h2>
+<ul>
+<li>Command issued by a court directing an authority to perform a public duty imposed upon it by law</li>
+<li><strong>Bombay Municipality vs Advance Builders</strong></li>
+</ul>
+<h2 id="certiorari">Certiorari</h2>
+<ul>
+<li><strong>inform</strong></li>
+<li>issued by Supreme Court (Art. 32)</li>
+<li>issued by High Court (Art. 226)</li>
+<li>direct inferior courts, tribunals or authorities</li>
+<li>transmit to the court the record of proceedings disposed of or pending therein for scrutiny, and, if necessary, for quashing the same</li>
+<li><strong>But can not be called for an act or ordinance</strong></li>
+</ul>
+<h2 id="prohibition">Prohibition</h2>
+<ul>
+<li>issued when inferior court or tribunal
+<ul>
+<li>proceeds to act without jurisdiction or in excess of jurisdiction</li>
+<li>proceeds to act in violation of rules of natural justice</li>
+<li>proceeds to act under a law which is itself ultra vires or unconstitutional</li>
+<li>proceeds to act in contravention of fundamental rights</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="amendments">Amendments</h1>
+<table>
+<thead>
+<tr>
+<th>Amendment</th>
+<th>Year</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>1956</td>
+<td>Reorganisation of states on linguistic basis and abolition of class A, B, C and D states</td>
+</tr>
+<tr>
+<td>42</td>
+<td>1976</td>
+<td>Fundamental Duties prescribed, India became Socialist Secular Republic</td>
+</tr>
+<tr>
+<td>44</td>
+<td>1978</td>
+<td>Right to Property deleted</td>
+</tr>
+<tr>
+<td>45</td>
+<td>1980</td>
+<td>Extended the period of SC/ST reservation for 10 more years (till 1990)</td>
+</tr>
+<tr>
+<td>52</td>
+<td>1985</td>
+<td>Defection to another party after election made illegal</td>
+</tr>
+<tr>
+<td>61</td>
+<td>1989</td>
+<td>Voting age reduced to 18 from 21</td>
+</tr>
+<tr>
+<td>86</td>
+<td>2002</td>
+<td>Free and compulsory education to children b/w 6 and 14</td>
+</tr>
+<tr>
+<td>101</td>
+<td>2016</td>
+<td>GST</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="fr-fd-dpsp">FR, FD, DPSP</h1>
+<h2 id="fundamental-rights">Fundamental Rights</h2>
+<ul>
+<li><strong>Part III (Article 12-35)</strong>
+<table>
+<thead>
+<tr>
+<th>Article</th>
+<th>Deals With</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>Definition of Fundamental Rights</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Laws inconsistent with or in derogation of Fundamental Rights</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Equality before law</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Prohibition of Discrimination</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Equality in case of Public Employment</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Abolition of Untouchability</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Abolition of Titles</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Right to Freedom</td>
+</tr>
+<tr>
+<td>19A</td>
+<td>Freedom of Speech &amp; Expression</td>
+</tr>
+<tr>
+<td>19B</td>
+<td>Freedom to assemble peacefully and without arms</td>
+</tr>
+<tr>
+<td>19C</td>
+<td>Freedom to form associations or unions</td>
+</tr>
+<tr>
+<td>19D</td>
+<td>Right to move freely in India</td>
+</tr>
+<tr>
+<td>19E</td>
+<td>Freedom to reside and settle in any part of the territory of India</td>
+</tr>
+<tr>
+<td>19F</td>
+<td>Freedom to practice any profession, or to carry on any occupation, trade or business</td>
+</tr>
+<tr>
+<td>19G</td>
+<td>Freedom to practise any profession</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Protection in respect of conviction for offenses</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Right to Life and Personal Liberty</td>
+</tr>
+<tr>
+<td>21A</td>
+<td>Right to Education</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Protection against arrest and detention in certain cases</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Prohibition of human trafficking and forced labour</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Prohibition of child labour</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Freedom to practise &amp; propagate religion freely</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Freedom to manage religious affairs</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Freedom as to payment of taxes for promotion of any particular region</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Freedom as to attendance at religious instruction or worship in certain educational institutions</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Protection of Interests of Minorities</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Right of minorities to establish and administer educational institutions</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Compulsory acquisition of property</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Remedies for enforcement of Fundamental Rights</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+</body>
+</html>

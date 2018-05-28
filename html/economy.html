@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>economy.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h2 id="definition">Definition</h2>
+<ul>
+<li>the science of logically oriented human beings:
+<ul>
+<li>with unlimited wants</li>
+<li>limited resources</li>
+</ul>
+</li>
+<li>the study of how individuals and societies choose to use the scarce resources that nature has provided to use</li>
+<li>it is the study of <strong>how people make choices</strong></li>
+</ul>
+<hr>
+<h2 id="branch-of-economics">Branch of economics</h2>
+<ul>
+<li>Microeconomics
+<ul>
+<li>deals with functioning of
+<ul>
+<li>individual, households</li>
+<li>industries, firms</li>
+</ul>
+</li>
+<li>and the behaviour of above-mentioned individual economic decision making units</li>
+<li>firm's choices about what to produce and how much to charge, and households' choices about what and how much to buy, helps to explain why the economy produces the things it does.</li>
+<li>sees and examines the <strong>trees</strong></li>
+</ul>
+</li>
+<li>Macroeconomics
+<ul>
+<li>it is the study of aggregates</li>
+<li>instead of understanding what determines the o/p at individual level, macroeconomics examines the factors that determine national o/p, national product</li>
+<li>sees and analyses the <strong>forest</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="economic-policy">Economic policy</h2>
+<ul>
+<li>Every action taken by any country's government to influence its economy is termed as a part of it's economic policy</li>
+<li><strong>1951 five year plans</strong></li>
+<li><strong>1965 green revolution</strong></li>
+<li>Objective (GEES)
+<ul>
+<li>Efficiency
+<ul>
+<li>an efficient economy is one that produces what people want at the least possible cost. if the system allocates resources to the production of things that nobody wants, it is inefficent</li>
+</ul>
+</li>
+<li>Equity
+<ul>
+<li>a more equal distribution of income and wealth</li>
+<li>it is a <strong>technical concept</strong> as equity may imply poverty alleviation, but the extent ot which the poor should receive cash benefits from the gov. is the subject of enormous disagreement</li>
+</ul>
+</li>
+<li>Growth
+<ul>
+<li>economic growth is an increase in the total o/p of an economy. if output grows faster than the pop., o/p per capita rises and standards of living increase</li>
+</ul>
+</li>
+<li>Stability
+<ul>
+<li>refers to the condition in which national output is growing steadily considering:
+<ul>
+<li>low inflation</li>
+<li>full employment</li>
+</ul>
+</li>
+<li>of resources</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="market-forces-and-demand">Market Forces and Demand</h2>
+<ul>
+<li>Market forces
+<ul>
+<li>theory of demand and supply</li>
+<li>considers how buyers and sellers react and how they interact with each another</li>
+<li>shows how supply and demand determine prices in a market economy and how prices, in turn, allocate the economy's scarce resources</li>
+</ul>
+</li>
+<li>Demand
+<ul>
+<li>willingness to buy/purchase</li>
+<li>quantity demanded of any good is the amount of good that buyers are willing and able to produce</li>
+<li>determined on <strong>the price of good</strong></li>
+<li>Law of demand
+<ul>
+<li>quantity demanded is inversely related to price all other factors remain same</li>
+<li>always certain exceptions to the law</li>
+</ul>
+</li>
+<li><strong>Ceteris peribus</strong>
+<ul>
+<li>Other things being equal</li>
+</ul>
+</li>
+<li>
+<img src="images/law-of-demand.png" alt="LOD" width="400" height="250">
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="concept-of-demand">Concept of Demand</h2>
+<ul>
+<li>Market Demand vs Individual Demand
+<ul>
+<li>Market Demand is the sum of all individual demands</li>
+<li>
+<img src="images/market-demand-curve.png" alt="MDC" width="400" height="250">
+</li>
+<li>the market demand curve shows how the quantity demanded of a good varies as the price of the good varies, while all the factors that affect how much consumers want to buy are held constant</li>
+</ul>
+</li>
+<li>Shift in Demand Curve
+<ul>
+<li>A new demand curve is obtained</li>
+<li>Increase in demand
+<ul>
+<li>Any change that increases the quantity demanded at every price shifts the demand curve to the right</li>
+</ul>
+</li>
+<li>Decrease in demand
+<ul>
+<li>Any change that reduces the quantity demanded at every price shifts the demand curve to the left</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Variables affecting shift in demand curve
+<ul>
+<li><strong>Income</strong>
+<ul>
+<li>Normal goods
+<ul>
+<li>A good for which, other things equal, an increase income leads to an increase in demand</li>
+<li>eg. eating outside will increase with increase in income</li>
+</ul>
+</li>
+<li>Inferior goods
+<ul>
+<li>A good for which, other things equal, an increase in income leads to a decrease in demand</li>
+<li>eg. consumption of salt may decrease or would remain constant with increase in income</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Substitute Goods</strong>
+<ul>
+<li>Two goods for which increase in the price of one leads to an increase in the demand for the other</li>
+<li>eg. If coke price increases, pepsi demand increase. This will shift the demand curve for Pepsi to right</li>
+</ul>
+</li>
+<li><strong>Complementary Goods</strong>
+<ul>
+<li>Two goods for which increase in price of one leads to a decrease in the demand for the other</li>
+<li>eg. price of car decrease, demand for petrol will rise, rightward shift for petrol to right</li>
+</ul>
+</li>
+<li><strong>Taste &amp; Preference</strong>
+<ul>
+<li>eg. I started eating non-veg. instead of veg.</li>
+</ul>
+</li>
+<li><strong>Expectation</strong>
+<ul>
+<li>Expectations about the future may affect the demand for a good or service today</li>
+<li>eg. Stock market</li>
+</ul>
+</li>
+<li><strong>Number of Buyers</strong></li>
+</ul>
+</li>
+<li>Exception to Law of Demand
+<ul>
+<li><strong>Giffen Goods</strong>
+<ul>
+<li>Those goods that do not comply with law of demand</li>
+<li>quantity demanded proportional to price</li>
+</ul>
+</li>
+<li><strong>Natural Calamities</strong>
+<ul>
+<li>emergency situations, prices hardly matters</li>
+</ul>
+</li>
+<li><strong>Fashionistas</strong>
+<ul>
+<li>branded products</li>
+</ul>
+</li>
+<li><strong>Anticipation of Prices</strong>
+<ul>
+<li>buying more if further price may increase</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="concept-of-supply">Concept of Supply</h2>
+<ul>
+<li>Willingness / desire to sell</li>
+<li>The quantity supplied of any good is the amount that sellers are willing and able to sell</li>
+<li>Quantity supplied is directly proportional to the price of the good</li>
+<li>Law of supply
+<ul>
+<li>Other things remain equal, when the price of a good rises, the quantity supplied of the good also rises, and vice versa</li>
+<li>
+<img src="images/law-of-supply.png" alt="LOS" width="400" height="250">
+</li>
+</ul>
+</li>
+<li>Individual Supply vs Market Supply
+<ul>
+<li>Market supply is the sum of all individual supplies</li>
+<li>the total quantity supplied at any price, the individual quantities found on the horizontal axis of the individual supply curves are added</li>
+</ul>
+</li>
+<li>Shift in Supply Curve
+<ul>
+<li>A new supply curve is obtained</li>
+<li>Increase in Supply
+<ul>
+<li>Any change that:
+<ul>
+<li>raises quantity supplied</li>
+<li>at every or any price</li>
+<li>shifts the supply curve to the right</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Decrease in Supply
+<ul>
+<li>Any change that:
+<ul>
+<li>reduces the quantity supplied</li>
+<li>at any and every price</li>
+<li>shifts the supply curve to the left</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Variables Affecting Supply Curve
+<ul>
+<li><strong>Input Prices</strong>
+<ul>
+<li>Supply of a good is negatively related to the price of the inputs</li>
+<li>eg. If price of raw materials used for making cake increase, producing cake is less profitable, supply decreases</li>
+</ul>
+</li>
+<li><strong>Technology</strong>
+<ul>
+<li>eg. Machines used for making cakes. If technology is good, it reduces other costs, more profitable, supply increase</li>
+</ul>
+</li>
+<li><strong>Expectations</strong>
+<ul>
+<li>Supplying more later thinking price would rise</li>
+<li>eg. During christmas, business would store cakes in storage so that when price rise they can get profits</li>
+</ul>
+</li>
+<li><strong>Number of sellers</strong>
+<ul>
+<li>More the number of sellers, more compteition, price is generally low</li>
+<li>eg. if producers of cake were to stop producing and retire from the cake business, the supply in market would fall</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Exceptions to the law of supply
+<ul>
+<li><strong>Expectations of future prices</strong>
+<ul>
+<li>a supplier's behaviour changes with future prices</li>
+<li>whatever the price may be presently producers may want to supply the goods when the prices rise even more which would get them good returns</li>
+<li>woollen clothes highest supply in winters</li>
+</ul>
+</li>
+<li><strong>Weather dependant produce from farms</strong>
+<ul>
+<li>if weather seems bad, products are not produced</li>
+</ul>
+</li>
+<li><strong>Perishable commodities</strong>
+<ul>
+<li>which perish in small time</li>
+<li>they need to be supplied before they perish</li>
+<li>sell entire stock asap</li>
+<li>eg. fruits</li>
+</ul>
+</li>
+<li><strong>Fashionista</strong>
+<ul>
+<li>when you sell goods which are in fashion then the sellers command a higher price</li>
+</ul>
+</li>
+<li><strong>Economic slowdown</strong>
+<ul>
+<li>Businees pass thru different economic phases like
+<ul>
+<li>slowdown</li>
+<li>recession</li>
+<li>depression</li>
+</ul>
+</li>
+<li>sellers have to adapt to these changes accordingly</li>
+</ul>
+</li>
+<li><strong>Modification change in businees</strong>
+<ul>
+<li>seller can plan to diversifyy and enter into an entirely new segment of business by exiting/continuing the present one</li>
+</ul>
+</li>
+<li><strong>Requirement of money/funds</strong>
+<ul>
+<li>seller sell immediately even at lower prices as money needed</li>
+</ul>
+</li>
+<li><strong>Supply of Labour</strong>
+<ul>
+<li>if the labour is willing to work, the firm will get the maximum benefit out them</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="point-of-equilibrium">Point of equilibrium</h2>
+<ul>
+<li>the point at which market demand and market supply curve meet</li>
+<li>price -&gt; <strong>Equilibrium price</strong></li>
+<li>quantity -&gt; <strong>Equilibrium quantity</strong></li>
+<li>Cases
+<ul>
+<li>Surplus or Excess Supply</li>
+<li>Shortage or Excess Demand</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

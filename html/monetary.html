@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>monetary.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h2 id="monetary-policy">Monetary Policy</h2>
+<ul>
+<li>it is the process by which
+<ul>
+<li>monetary authority of a country controls the supply of money</li>
+<li>by targeting a rate of interest for the purpose of promoting economic growth and stability</li>
+</ul>
+</li>
+<li>goals
+<ul>
+<li>stabilise the prices</li>
+<li>reduce the unemployment levels</li>
+</ul>
+</li>
+<li>types
+<ul>
+<li><strong>Expansionary</strong></li>
+<li><strong>Contractionary</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="role-of-central-bank">Role of Central Bank</h2>
+<ul>
+<li>Functions
+<ul>
+<li>Custody and management of Foreign Exchange Reserves</li>
+<li>Acting as a bank to the banker</li>
+<li>Acting as a bank to the government</li>
+<li>Leader of the last resort</li>
+<li>Controller of credit
+<ul>
+<li>exercises discretionary control over the monetary system of the country</li>
+<li>commands an imp. position in the monetary and banking structure of country</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Monetary policy
+<ul>
+<li><strong>Announced six times a year</strong></li>
+<li>Determines the supply of money in the economy</li>
+<li>Determines the rate of interest charged by bank</li>
+<li>Contains an economic overview and presents future forecasts</li>
+</ul>
+</li>
+<li>Instruments
+<ul>
+<li>Quantitative
+<ul>
+<li>bank rate</li>
+<li>statutory liquidity ratio</li>
+<li>cash reserve ratio</li>
+<li>repo rate</li>
+<li>reverse repo rate</li>
+<li>open market operations</li>
+</ul>
+</li>
+<li>Qualitative
+<ul>
+<li>Margin requirements</li>
+<li>Consumer credit regulation and guidelines</li>
+<li>moral suasion
+<ul>
+<li>moral request by bank to control it or not</li>
+</ul>
+</li>
+<li>direct action</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="bank-rate">Bank Rate</h2>
+<ul>
+<li>Refers to the official interest rate at which RBI provides loans to the banking system</li>
+<li>It includes
+<ul>
+<li>commercial/cooperative banks</li>
+<li>development banks etc.</li>
+</ul>
+</li>
+<li>such loans are given out by
+<ul>
+<li>direct lending</li>
+<li>rediscounting (buying back) the bills of commercial banks and treasury bills</li>
+</ul>
+</li>
+<li><strong>Bank rate is also known as discount rate</strong></li>
+<li>Objective
+<ul>
+<li>When RBI increases the bank rate, the cost of borrowing for banks rises</li>
+<li>this credit volume gets reduced leading to decline in supply of money</li>
+<li>thus, <strong>increase in bank rate reflects tightening of RBI monetary policy</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="repo-rate">Repo Rate</h2>
+<ul>
+<li>Repurchase rate</li>
+<li>Rate at which RBI lends to banks for short periods</li>
+<li>Done by RBI buying government bonds from banks with an agreement to sell them back at a fixed rate</li>
+<li>Objective
+<ul>
+<li>inject liquidity in the system</li>
+<li><strong>increased repo rate -&gt; expensive for banks to borrow</strong></li>
+<li><strong>decreased repo rate -&gt; cheaper for banks to borrow</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="bank-rate-vs-repo-rate">Bank Rate vs Repo Rate</h2>
+<ul>
+<li>Repo rate is a short term measure and it refers to short-term lonas and used for controlling amount of money in market</li>
+<li>Bank rate is a long term measure and is governed by the long-term monetary policy of RBI</li>
+</ul>
+<hr>
+<h2 id="reverse-repo-rate">Reverse Repo Rate</h2>
+<ul>
+<li>Rate of interest at which the RBI borrows funds from other banks in the short term</li>
+<li>Done by RBI selling <strong>government bonds</strong> or <strong>securities</strong> to banks with commitment to buy them back at a future date</li>
+<li>Bank use reverse repo facility to <strong>deposit their short term excess funds with RBI</strong> and <strong>earn interest for it</strong></li>
+<li>RBI can reduce liquidity in banking system by increasing the rate at which it borrows from banks</li>
+<li>Procedure
+<ul>
+<li>When RBI increases the reverse repo, it means that now RBI will provide extra interest on the money which it borrows from the banks.</li>
+<li>An increase in reverse repo rate means that banks earn higher returns by lending to RBI</li>
+<li>This indicates a hike in deposit rates</li>
+<li>pushes up interest rates</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="open-market-operations">Open Market Operations</h2>
+<ul>
+<li><strong>Purchase and Sale of the Government Securities by RBI from/to market</strong></li>
+<li>When there is excess of liquidity RBI resorts to <strong>sale of G-secs</strong> to suck out rupee from system</li>
+<li>When there is liquidity crunch, RBI buys securities from the market in order to release liquidity</li>
+<li>Objective
+<ul>
+<li>carried out to adjust liquidity condition of rupee in the economy</li>
+<li>when RBI sells g-secs to banks</li>
+<li>as soon as banks purchase g-secs, they have reduced money to lend to the industrial houses or other commercial sectors</li>
+<li>this reduces surplus cash, contracts the rupee liquidity</li>
+<li>contracts credit creation / credit supply</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="cash-reserve-ratio">Cash Reserve Ratio</h2>
+<ul>
+<li>It is the amount of funds that the banks are bound to keep with RBI as a percentage of their Net Demand and Time Liabilities (NDTL)</li>
+<li><strong>CRR = Cash Deposited with RBI / NDTL</strong></li>
+<li><strong>CRR has to be maintained on a daily basis with RBI by every bank</strong></li>
+<li>Objective
+<ul>
+<li>Ensure adequate liquidity in financial system</li>
+<li>enough solvency for banks</li>
+<li>CRR is maintained fortnightly average basis</li>
+</ul>
+</li>
+<li>CRR is altered by RBI</li>
+<li><strong>RBI does not pay any interest on the CRR balances</strong></li>
+<li>Reduction of CRR
+<ul>
+<li>excess funds are available with banks for deploying in other businesses because they are required to keep lesser amounts with RBI</li>
+<li>banks would have more money to lend</li>
+<li>this leads to reduction of interest rates on loans provided by banks</li>
+<li>example
+<ul>
+<li>SBI has balance of 100 crores</li>
+<li>CRR @5%</li>
+<li>SBI has to maintain atleast 5cr with RBI</li>
+<li>Only has 95cr to its disposal</li>
+<li>If CRR @4.5%</li>
+<li>SBI can lend more now outside as it has 95.5cr to its disposal</li>
+</ul>
+</li>
+<li>Impact on inflation
+<ul>
+<li>Reduction in CRR leaves more money in the hands of commercial banks and this leads to increase in money supply in system</li>
+<li>When money supply rises, too much money chases too few goods and this leads to rise in inflation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Increase in CRR
+<ul>
+<li>banks will have less money</li>
+<li>since banks don't earn any interest, banks are left with no option but to increase the interest rates</li>
+<li>hike in CRR sucks money out of system causing inflation to come down</li>
+</ul>
+</li>
+<li><strong>From 2006, RBI is empowered to fix the CRR on its discretion without any ceiling</strong></li>
+</ul>
+<hr>
+<h2 id="statutory-liquidity-ratio">Statutory Liquidity Ratio</h2>
+<ul>
+<li>All banks have to keep a fraction of their total net time and demand liabilites in form of liquid assets such as
+<ul>
+<li>G-secs</li>
+<li>precious metals</li>
+<li>approved securities amongst others</li>
+</ul>
+</li>
+<li>Maintained with banks themselves</li>
+<li><strong>SLR = Liquid Assets / NDTL</strong></li>
+<li><strong>Ratio was prescribed by Section 24(2A) of Banking Regulation Act 1949</strong></li>
+<li>Original ratio mandated for a <strong>23% SLR</strong></li>
+<li><strong>Presently 21% (August 2016)</strong></li>
+<li>SLR deposits include
+<ul>
+<li>Cash</li>
+<li>Gold reserves kept in bank</li>
+<li>Balances with RBI</li>
+<li>Net balance in current account</li>
+<li>Investment in G-secs(if any)</li>
+</ul>
+</li>
+<li><strong>SLR has to be maintained on a daily basis by every bank</strong></li>
+<li>SLR is inversely proportional to money in market</li>
+</ul>
+<hr>
+<h2 id="crr-vs-slr">CRR vs SLR</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>CRR</th>
+<th>SRR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stored in form of</td>
+<td>Cash</td>
+<td>Liquid Assets</td>
+</tr>
+<tr>
+<td>Stored With</td>
+<td>RBI(in their premises)</td>
+<td>Bank themselves</td>
+</tr>
+<tr>
+<td>Ratio comparison</td>
+<td>Less than SLR</td>
+<td>More than CRR</td>
+</tr>
+<tr>
+<td>Current Rates</td>
+<td>4%</td>
+<td>21.5%</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="liquidity-adjustment-facility">Liquidity Adjustment Facility</h2>
+<ul>
+<li>This is the primary instrument of RBI for modulating liquidity and sending interest rate signals to the market</li>
+<li>It refers to the difference b/w the two key rates
+<ul>
+<li>repo rate</li>
+<li>reverse repo rate</li>
+</ul>
+</li>
+<li>Also known as <strong>Liquidity Corridor</strong></li>
+<li>While repo infuses liquidity into the system, reverse repo absorbs liquidity from system</li>
+<li><strong>RBI just announces Repo Rate</strong></li>
+<li><strong>Reverse repo rate is linked to repo rate and is 100 basis points (1%) below repo rate</strong></li>
+</ul>
+<hr>
+<h2 id="marginal-standing-facility">Marginal Standing Facility</h2>
+<ul>
+<li>Created by <strong>RBI in its credit policy of may 2011</strong></li>
+<li>MSF is the rate at which banks are able to borrow overnight funds from RBI against apporved government securities</li>
+<li><strong>MSF is always 1% higher than Repo rate</strong></li>
+</ul>
+<hr>
+<h2 id="qualitative-tools">Qualitative Tools</h2>
+<ul>
+<li>Those tools thru which the central bank not only controls the value of loans but also the purpose for which these loans are assigned by the commercial banks
+<ul>
+<li>Moral suasion</li>
+<li>Rationing of credit</li>
+<li>Direct Action</li>
+<li>Margin requirements</li>
+</ul>
+</li>
+</ul>
+<h4 id="moral-suasion">Moral Suasion</h4>
+<ul>
+<li>Suasion means request or persuasion</li>
+<li>To arrest inflationary situation central bank persuades and requests the commercial banks to refrain from giving loans for speculative and non-essential purposes</li>
+<li>To counter deflation, central bank persuades the commercial banks to extend credit for different purposes</li>
+<li>Periodic discussions are held with authorities of commercial banks in this respect from 1949</li>
+</ul>
+<h4 id="rationing-of-credit">Rationing of Credit</h4>
+<ul>
+<li>Method by which the RBI seeks to limit the maximum amount of loans and advances</li>
+<li>Also in certain cases, fix ceiling for specific categories of loans and advances</li>
+<li><strong>Priority Sector Landing</strong> - making credit flow to certain priority or weaker sectorsnby charging concessional rates of interest</li>
+</ul>
+
+</body>
+</html>

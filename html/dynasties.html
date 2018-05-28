@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dynasties.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="ancient-india">Ancient India</h1>
+<h2 id="magadha-empire">Magadha Empire</h2>
+<ul>
+<li>Capital
+<ul>
+<li>Rajagir</li>
+<li>Pataliputra</li>
+<li>Vaishali (temp.)</li>
+</ul>
+</li>
+<li>Haryanka Dynasty
+<ul>
+<li>Bimbisara</li>
+<li>Ajatshatru</li>
+<li>Udayin
+<ul>
+<li>Shifted capital to pataliputra</li>
+</ul>
+</li>
+<li>Shisu Nagas
+<ul>
+<li>Shifted capital temporarily to vaishali</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nanda Dynasty
+<ul>
+<li>Dhanananda
+<ul>
+<li><strong>Alexander invaded india 326 BC</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="maurya-dynasty">Maurya Dynasty</h2>
+<ul>
+<li>Chandragupta Maurya
+<ul>
+<li><strong>Mudraraksha</strong> is written by Vishakadatta about chandragupta</li>
+<li>Megasthenese wrote <strong>Indica</strong></li>
+<li>Kautilya wrote <strong>Arthashastra</strong></li>
+</ul>
+</li>
+<li>Bindusar</li>
+<li>Ashoka
+<ul>
+<li><strong>Kalinga War</strong> 261 BC</li>
+<li><strong>Devnama Priya Darshi Raja</strong></li>
+<li>Single lion capital
+<ul>
+<li>Rampurva</li>
+<li>Lavriya</li>
+<li>Nandangarh</li>
+</ul>
+</li>
+<li>Single bull capital
+<ul>
+<li>Rampurva</li>
+</ul>
+</li>
+<li>Four lion capital
+<ul>
+<li>Sarnath</li>
+<li>Sanchi</li>
+</ul>
+</li>
+<li>Carved Elephant
+<ul>
+<li>Dhauli</li>
+</ul>
+</li>
+<li>Engraved Elephant
+<ul>
+<li>Kalsi</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Decline
+<ul>
+<li>Brahmanical reaction</li>
+<li>Financial crisis</li>
+<li>Oppressive rule</li>
+<li>New knowledge on outlyinh area</li>
+<li>Neglect of North-west frontier</li>
+<li><strong>Destroyed by Pushyamitra Sunga</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="central-asia">Central Asia</h2>
+<ul>
+<li>Indo Greeks
+<ul>
+<li>Ruled Bactria</li>
+<li>Menander
+<ul>
+<li>Had his capital at sialkot</li>
+</ul>
+</li>
+<li>First to <strong>issue coins which can be definitely attributed to kings</strong></li>
+</ul>
+</li>
+<li>Shakas
+<ul>
+<li>Maves
+<ul>
+<li>first king</li>
+</ul>
+</li>
+<li>Rudra Daman
+<ul>
+<li>most famous ruler</li>
+<li><strong>Defeated Satavahana</strong></li>
+</ul>
+</li>
+<li><strong>Defeated by Vikramaditya</strong></li>
+</ul>
+</li>
+<li>Parthians
+<ul>
+<li>earlier lived in Iran</li>
+<li>Gondohernes
+<ul>
+<li>most famous ruler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Kushans
+<ul>
+<li>branch of chinese tribe</li>
+<li>Empire extended from oxus river to ganga</li>
+<li>Capital
+<ul>
+<li>Purushpura</li>
+<li>Mathura</li>
+</ul>
+</li>
+<li>Kanishka
+<ul>
+<li>most famous ruler</li>
+<li>started <strong>Saka era</strong> AD 78</li>
+</ul>
+</li>
+<li>Gandhara school of art with indian tradition and greek techniques received royal patronage</li>
+<li><strong>Issued gold coins with higher degree of metallic purity than in Gupta gold coins</strong></li>
+</ul>
+</li>
+<li>Satavahana
+<ul>
+<li>Succeeded Mauryas in central india</li>
+<li>Simuka
+<ul>
+<li>founder</li>
+<li><strong>Destroyed Sunga</strong></li>
+</ul>
+</li>
+<li>Gautamiputra Satakarni
+<ul>
+<li>greatest ruler</li>
+</ul>
+</li>
+<li>Hala
+<ul>
+<li>Wrote <strong>Gathasaptsati</strong> in Prakrit</li>
+</ul>
+</li>
+<li>Buddhist temple
+<ul>
+<li>Called Chaitya</li>
+<li>Most famous at Karle</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="sangam-age">Sangam Age</h2>
+<ul>
+<li>existed roughly b/w 300BC and 300AD</li>
+<li>Pandyas
+<ul>
+<li>Emblem - Fish</li>
+<li>Famous for pearls</li>
+<li>Capital
+<ul>
+<li>Madurai</li>
+</ul>
+</li>
+<li>Mudukudumi
+<ul>
+<li>great conquerer</li>
+</ul>
+</li>
+<li>Nedunijhelian
+<ul>
+<li>most reputed ruler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cholas
+<ul>
+<li>Emblem - Tiger</li>
+<li>modern Tanjore and Tiruchirapalli districts</li>
+<li>Capital
+<ul>
+<li>Uraiyur</li>
+</ul>
+</li>
+<li>Elara
+<ul>
+<li>earliest known chola king</li>
+<li>ruled over lanka</li>
+</ul>
+</li>
+<li>Karikala
+<ul>
+<li>greatest king</li>
+<li>founded Puhar</li>
+</ul>
+</li>
+<li>Maintained navy</li>
+<li><strong>Wiped out by Pallavas</strong></li>
+</ul>
+</li>
+<li>Cheras
+<ul>
+<li>Emblem - Bow</li>
+<li>Capital
+<ul>
+<li>Vanijji</li>
+</ul>
+</li>
+<li>Temple of Augustus at Muzris</li>
+<li>Udaiyangeral
+<ul>
+<li>better known ruler</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="gupta-empire">Gupta Empire</h2>
+<ul>
+<li>Last rulers of Magadh</li>
+<li>Capital
+<ul>
+<li>Prayag</li>
+<li>Ujjain</li>
+</ul>
+</li>
+<li>Srigupta
+<ul>
+<li>founder</li>
+</ul>
+</li>
+<li>Mahendragupta I
+<ul>
+<li>first gupta ruler to assume the title of <strong>maharajadhiraj</strong></li>
+</ul>
+</li>
+<li>Samudragupta
+<ul>
+<li>believed in policy of violence and conquest</li>
+<li>Harisena wrote allahabad inscription</li>
+<li>Adopted the title of <strong>kaviraj</strong></li>
+</ul>
+</li>
+<li>Chandragupta II
+<ul>
+<li><strong>first gupta ruler to issue silver coin</strong></li>
+<li>extended limits of empire by marriage, alliances and conquest</li>
+<li>made Ujjain as capital</li>
+<li>Fa-hien visited India</li>
+<li>Adopted the title of <strong>vikramaditya</strong></li>
+</ul>
+</li>
+<li>Kumargupta I
+<ul>
+<li>Adopted the title of <strong>mahendraditya</strong></li>
+<li>worshipped god kartikeya</li>
+<li>Founded the <strong>monastry at Nalanda</strong></li>
+</ul>
+</li>
+<li>Skandagupta
+<ul>
+<li>Hunas invaded India but were repelled by him</li>
+</ul>
+</li>
+<li>Administration
+<ul>
+<li>The most important officers were the <strong>kumaramatyas</strong></li>
+<li>kingdom was divided into provinces(bhukti), managed by <strong>upaika</strong></li>
+<li>bhuktis were divided into district(vishayas), managed by <strong>vishyaptai</strong></li>
+<li>guilds were given considerable shares</li>
+<li>grant of fiscal and administrative concessions to priests and administrators</li>
+<li>Guptas issued largest number of gold coins which were called <strong>Dinars</strong></li>
+</ul>
+</li>
+<li>Society
+<ul>
+<li>Brahamanas claimed many privileges</li>
+<li>position of Sudras improved</li>
+<li>women were also allowed to listen to puranas and epics</li>
+<li>polygamy was common</li>
+<li>idol worship</li>
+</ul>
+</li>
+<li>Kalidasa wrote
+<ul>
+<li>Lyrics - <strong>Ritusambara and Meghduta</strong></li>
+<li>Dramas - <strong>Abhigyan Shakuntalam, Vikramovashi and Malvikagnimitra</strong></li>
+<li>Epics  - <strong>Kumasambhava and Raghuvamsha</strong></li>
+</ul>
+</li>
+<li>Aryabhatta wrote <strong>Aryabhattca</strong></li>
+<li>School of art
+<ul>
+<li>Gandhara
+<ul>
+<li>Influenced by roman and greeks</li>
+<li>Patrons were sakas and kushanas</li>
+<li>Realistic representation of human figures</li>
+<li>distinguished muscles of body and transparent garments</li>
+<li>white stones used</li>
+</ul>
+</li>
+<li>Mathura
+<ul>
+<li>Standing female figure of Amohini relief</li>
+<li>Buddha and Mahavira belong to mathura school</li>
+<li>majority of creation consisted of nude, seminude figure of female Yakshinis and Apsaras</li>
+<li>red sand stones used</li>
+</ul>
+</li>
+<li>Amravati
+<ul>
+<li>depicted love, compassion, devotion and serenity</li>
+<li>white marbles used</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="early-medieval-india">Early Medieval India</h2>
+<ul>
+<li>Pallavas
+<ul>
+<li>Pallavas means creeper</li>
+<li>Capital
+<ul>
+<li>Kanchi</li>
+</ul>
+</li>
+<li>Narsimhavaraman I
+<ul>
+<li>one of the earliest ruler</li>
+<li>Huen Tsang visited India</li>
+<li>defeated Chalukya king Pulakesin II</li>
+<li>founded the seven rath temples and the port city of mahabalipuram</li>
+</ul>
+</li>
+<li>Narsimhavaraman II
+<ul>
+<li>constructed
+<ul>
+<li>kailash natha temple at kanchi</li>
+<li>shore temple at mahabalipuram</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Chalukyas
+<ul>
+<li>in northern maharashtra and berar</li>
+<li><strong>Satavahanas -&gt; Vakatakas -&gt; Chalukyas -&gt; Rashtrakutas</strong></li>
+<li>Capital
+<ul>
+<li>Vatapi</li>
+</ul>
+</li>
+<li>Pulakesin II
+<ul>
+<li><strong>defeated Harshavardhan</strong> at Narmada</li>
+<li><strong>defeated Pallava King Mahendravarman I</strong></li>
+<li><strong>killed by Narsimhavarman I</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Palas
+<ul>
+<li>Gopala
+<ul>
+<li>founder</li>
+</ul>
+</li>
+<li>Dharmapala</li>
+<li>Devapala
+<ul>
+<li><strong>defeated by Rashtrakuta ruler Dhruva</strong></li>
+<li><strong>defeated by Pratihara king Nagabhatta II</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pratiharas
+<ul>
+<li>also called Gujara-Pratiharas</li>
+<li>Mihir Bhoja
+<ul>
+<li>founder</li>
+<li>greatest ruler</li>
+<li>devotee of Vishnu</li>
+<li>adopted the title <strong>Adivaraha</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rashtrakutas
+<ul>
+<li>Dantidurga
+<ul>
+<li>founder</li>
+</ul>
+</li>
+<li>Capital
+<ul>
+<li>Manyakhet near modern Sholapur</li>
+</ul>
+</li>
+<li>Govinda III
+<ul>
+<li>greatest ruler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Senas
+<ul>
+<li>Samantha Sena
+<ul>
+<li>greatest ruler</li>
+<li>introduced caste hierarchy in bengal</li>
+</ul>
+</li>
+<li>Lakshmansena
+<ul>
+<li><strong>defeated Jayachandra of Gahadavala</strong></li>
+<li><strong>Muhammad Khilji</strong> invaded Bengal during his reign</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Gahadavalas
+<ul>
+<li>Chandradeva
+<ul>
+<li>first great ruler</li>
+<li>made <strong>Kannauj</strong> his capital</li>
+</ul>
+</li>
+<li>Jayachandra
+<ul>
+<li><strong>defeated by Lakshmansena</strong></li>
+<li><strong>killed by Mohammad Ghori</strong> (Battle of Chandawar)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Paramars
+<ul>
+<li>Bhoja Paramar
+<ul>
+<li>greatest king</li>
+<li>founded city of Bhopal</li>
+</ul>
+</li>
+<li>Capital
+<ul>
+<li>Dhara</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Chahamanas
+<ul>
+<li>also called Chauhans</li>
+<li>Capital
+<ul>
+<li>Sambhar</li>
+</ul>
+</li>
+<li>Ajayaraja
+<ul>
+<li>earliest ruler</li>
+<li>founder Ajmer</li>
+</ul>
+</li>
+<li>Prithviraj III
+<ul>
+<li>great ruler</li>
+<li>Chanderbardai wrote <strong>Prithviraj Raso</strong></li>
+<li><strong>defeated Mohammad Ghori</strong></li>
+<li><strong>defeated by Ghori</strong> (Second battle of Tarain)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Medieval Cholas
+<ul>
+<li>Vijayalaya
+<ul>
+<li>founder</li>
+</ul>
+</li>
+<li>Raja Raja I
+<ul>
+<li>built Siva temple of Rajarajeshwara at Tanjore</li>
+</ul>
+</li>
+<li>Chola empire was divided into Mandlams(provinces)</li>
+<li>Mandlams were divided into Valanadu and Nadu</li>
+<li><strong>Ur -&gt; general assembly of village</strong></li>
+<li><strong>Sabha -&gt; gathering of adult men</strong></li>
+<li><strong>Nagram -&gt; gathering of trader and merchants</strong></li>
+<li>nayanars and alvars existed</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>geography.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="passes">Passes</h1>
+<h2 id="dungri-la-pass">Dungri La Pass</h2>
+<ul>
+<li>aka Mana Pass</li>
+<li>located in <strong>Nanda Devi Biosphere Reserve</strong> of the <strong>Zaskar range</strong> in <strong>Uttarakhand</strong></li>
+<li>connects <strong>India</strong> and <strong>Tibet</strong></li>
+</ul>
+<h2 id="chang-la-pass">Chang La Pass</h2>
+<ul>
+<li>elevation of over 5300 m</li>
+<li>connects <strong>Indus valley</strong> to <strong>Pangong Lake</strong> region</li>
+<li><strong>Changtang plateau is known for its high altitude giant lakes and vast highlands of great himalayas</strong></li>
+</ul>
+<h2 id="karakoram-pass">Karakoram Pass</h2>
+<ul>
+<li>elevation of 4694 m</li>
+<li>between <strong>India</strong> and <strong>China</strong> in the <strong>Karakoram Range</strong></li>
+<li>oldest route between <strong>Leh</strong> and <strong>Yarkant</strong></li>
+<li>tallest pass of Karakoram mountain range</li>
+</ul>
+<h2 id="sela-pass">Sela Pass</h2>
+<ul>
+<li>elevation of 4170 m</li>
+<li><strong>Tawang District</strong> of <strong>Arunachal Pradesh</strong></li>
+<li>connects <strong>Tawang</strong> to rest of India through Tezpur and Guwahati</li>
+<li>receives heavy snowfall in winter</li>
+<li>remains opens throughout the year</li>
+<li>only gateway to the Tawang and <strong>Buddhist Tawang Monastery</strong></li>
+</ul>
+<h2 id="khardung-la-pass">Khardung La Pass</h2>
+<ul>
+<li>elevation of 5800 m</li>
+<li>highest motorable pass</li>
+<li>located near <strong>Ladakh</strong> region</li>
+</ul>
+<h2 id="bomdi-la-pass">Bomdi La Pass</h2>
+<ul>
+<li>elevation of 2600 m</li>
+<li>connects <strong>Arunachal Pradesh</strong> with <strong>Lhasa, Tibet</strong></li>
+</ul>
+<h2 id="zoji-la-pass">Zoji La Pass</h2>
+<ul>
+<li>elevation of 3950 m</li>
+<li>connects <strong>Srinagar</strong> with <strong>Kargil</strong> and <strong>Leh</strong></li>
+<li>vital link between <strong>Ladakh</strong> and <strong>Kashmir</strong></li>
+</ul>
+<h2 id="shipki-la-pass">Shipki La Pass</h2>
+<ul>
+<li>Indo-Tibet border</li>
+<li>Located in <strong>Kinnaur district</strong> in <strong>Himachal Pradesh</strong></li>
+<li><strong>Sutlej river enters India through this pass</strong></li>
+</ul>
+<h2 id="pir-panjal-pass">Pir Panjal Pass</h2>
+<ul>
+<li>connects <strong>Kullu Valley</strong> with <strong>Lahaul Valley</strong> and <strong>Spiti Valley</strong> of Himachal Pradesh</li>
+</ul>
+<h2 id="nathu-la-pass">Nathu La Pass</h2>
+<ul>
+<li>elevation of 4310 m</li>
+<li>connects <strong>Sikkim</strong> and <strong>China</strong></li>
+</ul>
+<h2 id="lipu-lekh-pass">Lipu Lekh Pass</h2>
+<ul>
+<li>elevation of 5340 m</li>
+<li>connects <strong>Kumaon region</strong> of <strong>Uttarakhand</strong> with <strong>Tibet</strong></li>
+</ul>
+<h2 id="diphu-pass">Diphu Pass</h2>
+<ul>
+<li>elevation of 4587 m</li>
+<li>at tri-point of borders of <strong>India</strong>, <strong>China</strong> and <strong>Myanmar</strong></li>
+<li>strategic approach to eastern Assam</li>
+</ul>
+<h2 id="jelep-la-pass">Jelep La Pass</h2>
+<ul>
+<li>elevation of 4267 m</li>
+<li>connects <strong>Sikkim</strong> with <strong>Lhasa, Tibet</strong></li>
+</ul>
+<hr>
+<h1 id="rivers">Rivers</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Origin</th>
+<th>Mouth</th>
+<th>Mixes With</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Indus</strong></td>
+<td>Sengge Zangbo and Gar, Tibet</td>
+<td>Indus river delta, Karachi</td>
+<td></td>
+</tr>
+<tr>
+<td>Sutlej</td>
+<td>Lake Rakshas Tal, Tibet</td>
+<td></td>
+<td>Indus near Bhawalpur, Pak</td>
+</tr>
+<tr>
+<td>Beas</td>
+<td>Beas Kund, Rohtang</td>
+<td></td>
+<td>Sutlej near Firozpur, Punjab</td>
+</tr>
+<tr>
+<td>Parbati</td>
+<td>Man Talai near Parbati Pass</td>
+<td></td>
+<td>Beas near Kullu</td>
+</tr>
+<tr>
+<td>Chenab</td>
+<td>Bara Lacha Pass, Lahaul and Spiti</td>
+<td></td>
+<td>Sutlej near Unch Sharif, Pak</td>
+</tr>
+<tr>
+<td>Ravi</td>
+<td>Kangra, HP</td>
+<td></td>
+<td>Chenab in Pakistan</td>
+</tr>
+<tr>
+<td>Jhelum</td>
+<td>Verinag spring, Anantnag, J&amp;K</td>
+<td></td>
+<td>Chenab in Pakistan</td>
+</tr>
+<tr>
+<td><strong>Brahmaputra</strong></td>
+<td>Angsi glacier, Tibet</td>
+<td>Ganges Delta, Bangladesh</td>
+<td></td>
+</tr>
+<tr>
+<td>Subansiri</td>
+<td>Himalayas, China</td>
+<td></td>
+<td>Brahmaputra at Lakhimpur, Assam</td>
+</tr>
+<tr>
+<td>Dihang</td>
+<td>Patkai Hills</td>
+<td></td>
+<td>Brahmaputra at Dihingmukh, Assam</td>
+</tr>
+<tr>
+<td>Manas</td>
+<td>Bhutan</td>
+<td></td>
+<td>Brahmaputra at Jogighopa, Assam</td>
+</tr>
+<tr>
+<td>Teesta</td>
+<td>Cholamu and Gurudongmar lakes</td>
+<td></td>
+<td>Brahmaputra near Rangpur, Bangladesh</td>
+</tr>
+<tr>
+<td>Lohit</td>
+<td>Zayal Chu, east Tibet</td>
+<td></td>
+<td>Brahmaputra</td>
+</tr>
+<tr>
+<td>Dibang</td>
+<td>Keya pass, Dibang Valley in Arunachal Pradesh</td>
+<td></td>
+<td>Lohit in Sadiya, Assam</td>
+</tr>
+<tr>
+<td><strong>Ganga</strong></td>
+<td>Gangotri, Uttarakhand</td>
+<td>Ganges Delta, Bangladesh</td>
+<td></td>
+</tr>
+<tr>
+<td>Hooghly</td>
+<td>Splits from Ganga near Farkka bridge, Murshidabad</td>
+<td>Bay of Bengal</td>
+<td></td>
+</tr>
+<tr>
+<td>Damodar</td>
+<td>Chandwa, Latehar, Jharkhand</td>
+<td></td>
+<td>Hooghly in West Bengal</td>
+</tr>
+<tr>
+<td>Kosi</td>
+<td>Saptkoshi tributaries in Nepal</td>
+<td></td>
+<td>Ganga near Kursela, Bihar</td>
+</tr>
+<tr>
+<td>Gandak</td>
+<td>Nhubine glacier, Mustang, Nepal</td>
+<td></td>
+<td>Ganga near Sonpur, Bihar</td>
+</tr>
+<tr>
+<td>Son</td>
+<td>Amarkantak, MP</td>
+<td></td>
+<td>Ganga near north Patna</td>
+</tr>
+<tr>
+<td><strong>Yamuna</strong></td>
+<td>Yamunotri Glacier, Uttarakhand</td>
+<td></td>
+<td>Ganga at Allahabad</td>
+</tr>
+<tr>
+<td>Alaknanda</td>
+<td>Satopnath</td>
+<td></td>
+<td>Ganga at Devprayag, Uttarakhand</td>
+</tr>
+<tr>
+<td>Bhagirathi</td>
+<td>Gaumukh, Uttarakhand</td>
+<td></td>
+<td>Ganga at Devprayag, Uttarakhand</td>
+</tr>
+<tr>
+<td><strong>Godavari</strong></td>
+<td>Brahmagiri mountains, Nasik</td>
+<td>East Godavari district, AP</td>
+<td></td>
+</tr>
+<tr>
+<td>Indravati</td>
+<td>Dandakaranya, Kalahandi, Orissa</td>
+<td></td>
+<td>Godavari near border of Maharashtra, Chhatisgarh and Telengana</td>
+</tr>
+<tr>
+<td><strong>Krishna</strong></td>
+<td>Mahabaleshwar, Maharashtra</td>
+<td>Krishna district, AP</td>
+<td></td>
+</tr>
+<tr>
+<td>Tungabhadra</td>
+<td>Confluence of Tunga and Bhadra near Koodli, Karnataka</td>
+<td></td>
+<td>Krishna near Alampur, Telengana</td>
+</tr>
+<tr>
+<td>Bhima</td>
+<td>Bhimashankar, Maharashtra</td>
+<td></td>
+<td>Krishna near Raichur</td>
+</tr>
+<tr>
+<td>Indrayani</td>
+<td>Lonaval, Maharashtra</td>
+<td></td>
+<td>Bhima</td>
+</tr>
+<tr>
+<td><strong>Kaveri</strong></td>
+<td>Talakaveri, Kodagu, Karnataka</td>
+<td>Kaveri delta, TN</td>
+<td></td>
+</tr>
+<tr>
+<td>Amravati</td>
+<td>Anamalai Hills</td>
+<td></td>
+<td>Kaveri at Karur, TN</td>
+</tr>
+<tr>
+<td><strong>Mahanadi</strong></td>
+<td>Dandkaranya, Chhatisgarh</td>
+<td>False point, Kendrapada, Odisha</td>
+<td></td>
+</tr>
+<tr>
+<td>Pennar</td>
+<td>Nandi hills, Chikkaballapur, Karnataka</td>
+<td>Nellore, AP</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Tapti</strong></td>
+<td>Satpura Range, MP</td>
+<td>Gulf of Khambat, Surat</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Narmada</strong></td>
+<td>Narmada Kund, Amarkantak, MP</td>
+<td>Gulf of Khambat, Surat</td>
+<td></td>
+</tr>
+<tr>
+<td>Sabarmati</td>
+<td>Dhebar lake, Aravalli, Rajasthan</td>
+<td>Gulf of Khambat</td>
+<td></td>
+</tr>
+<tr>
+<td>Periyar</td>
+<td>Sivagiri hills, TN</td>
+<td>Lakshadweep sea, Kerala</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="dams">Dams</h1>
+<table>
+<thead>
+<tr>
+<th>Dam</th>
+<th>River</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tungabhadra</td>
+<td>Tungabhadra</td>
+<td>Karnataka</td>
+</tr>
+<tr>
+<td>Mettur</td>
+<td>Kaveri</td>
+<td>Tamil Nadu</td>
+</tr>
+<tr>
+<td>Krishnarajsagar</td>
+<td>Kaveri</td>
+<td>Karnataka</td>
+</tr>
+<tr>
+<td>Indira Sagar</td>
+<td>Narmada</td>
+<td>Madhya Pradesh</td>
+</tr>
+<tr>
+<td>Sardar Sarovar</td>
+<td>Narmada</td>
+<td>Gujarat</td>
+</tr>
+<tr>
+<td>Omkareshwar</td>
+<td>Narmada</td>
+<td>Madhya Pradesh</td>
+</tr>
+<tr>
+<td>Hirakud</td>
+<td>Mahanadi</td>
+<td>Odisha</td>
+</tr>
+<tr>
+<td>Bhakra Nangal</td>
+<td>Sutlej</td>
+<td>Punjab/Himachal Pradesh</td>
+</tr>
+<tr>
+<td>Nagarjuna Sagar</td>
+<td>Krishna</td>
+<td>Telengana/Andhra Pradesh</td>
+</tr>
+<tr>
+<td>Uri</td>
+<td>Jhelum</td>
+<td>Jammu &amp; Kashmir</td>
+</tr>
+<tr>
+<td>Ramagundam</td>
+<td>Godavari</td>
+<td>Andhra Pradesh</td>
+</tr>
+<tr>
+<td>Dummaguden</td>
+<td>Godavari</td>
+<td>Andhra Pradesh</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
