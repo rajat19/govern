@@ -19,7 +19,7 @@
 		- exercises discretionary control over the monetary system of the country
 		- commands an imp. position in the monetary and banking structure of country
 - Monetary policy
-	- **Announced six times a year****
+	- **Announced six times a year**
 	- Determines the supply of money in the economy
 	- Determines the rate of interest charged by bank
 	- Contains an economic overview and presents future forecasts
@@ -50,7 +50,7 @@
 - Objective
 	- When RBI increases the bank rate, the cost of borrowing for banks rises
 	- this credit volume gets reduced leading to decline in supply of money
-	- thus, **increase in bank rate reflects tightening of RBI monetary policy****
+	- thus, **increase in bank rate reflects tightening of RBI monetary policy**
 ---
 ## Repo Rate
 - Repurchase rate
@@ -58,8 +58,8 @@
 - Done by RBI buying government bonds from banks with an agreement to sell them back at a fixed rate
 - Objective
 	- inject liquidity in the system
-	- **increased repo rate -> expensive for banks to borrow****
-	- **decreased repo rate -> cheaper for banks to borrow****
+	- **increased repo rate -> expensive for banks to borrow**
+	- **decreased repo rate -> cheaper for banks to borrow**
 ---
 ## Bank Rate vs Repo Rate
 - Repo rate is a short term measure and it refers to short-term lonas and used for controlling amount of money in market
@@ -79,8 +79,8 @@
 
 ---
 ## Open Market Operations
-- **Purchase and Sale of the Government Securities by RBI from/to market****
-- When there is excess of liquidity RBI resorts to **sale of G-secs**** to suck out rupee from system
+- **Purchase and Sale of the Government Securities by RBI from/to market**
+- When there is excess of liquidity RBI resorts to **sale of G-secs** to suck out rupee from system
 - When there is liquidity crunch, RBI buys securities from the market in order to release liquidity
 - Objective
 	- carried out to adjust liquidity condition of rupee in the economy
@@ -92,14 +92,14 @@
 ---
 ## Cash Reserve Ratio
 - It is the amount of funds that the banks are bound to keep with RBI as a percentage of their Net Demand and Time Liabilities (NDTL)
-- **CRR = Cash Deposited with RBI / NDTL****
+- **CRR = Cash Deposited with RBI / NDTL**
 - **CRR has to be maintained on a daily basis with RBI by every bank**
 - Objective
 	- Ensure adequate liquidity in financial system
 	- enough solvency for banks
 	- CRR is maintained fortnightly average basis
 - CRR is altered by RBI
-- **RBI does not pay any interest on the CRR balances****
+- **RBI does not pay any interest on the CRR balances**
 - Reduction of CRR
 	- excess funds are available with banks for deploying in other businesses because they are required to keep lesser amounts with RBI
 	- banks would have more money to lend
@@ -127,10 +127,10 @@
 	- precious metals
 	- approved securities amongst others
 - Maintained with banks themselves
-- **SLR = Liquid Assets / NDTL****
+- **SLR = Liquid Assets / NDTL**
 - **Ratio was prescribed by Section 24(2A) of Banking Regulation Act 1949**
 - Original ratio mandated for a **23% SLR**
-- **Presently 21% (August 2016)****
+- **Presently 21% (August 2016)**
 - SLR deposits include
 	- Cash
 	- Gold reserves kept in bank
@@ -162,7 +162,7 @@
 
 ---
 ## Marginal Standing Facility
-- Created by **RBI in its credit policy of may 2011****
+- Created by **RBI in its credit policy of may 2011**
 - MSF is the rate at which banks are able to borrow overnight funds from RBI against apporved government securities
 - **MSF is always 1% higher than Repo rate**
 

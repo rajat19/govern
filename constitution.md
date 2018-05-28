@@ -93,6 +93,22 @@
 ---
 # Schedules
 List in the Constitution that categorise and tabulate bureaucratic activity and policy of the government
+
+## Learning Way
+- TEARS OF OLD PM
+- territory
+- emoluments
+- affirmation/oaths
+- rajya sabha
+- scheduled areas
+- other scheduled areas
+- federal provisions
+- official languages
+- land reforms
+- defection
+- panchayat
+- municipalities
+
 ## Schedule 1
 * **Article 1 and 4**
 * List the states and territories of india
@@ -125,6 +141,7 @@ List in the Constitution that categorise and tabulate bureaucratic activity and 
 
 ## Schedule 9
 * Validation of certains acts and regulations
+* Land reforms
 
 ## Schedule 10
 * **Anti-defection** provisions for **MP** and **Members of state legislatures**
@@ -142,12 +159,12 @@ List in the Constitution that categorise and tabulate bureaucratic activity and 
 Power to issue writs is primarily a provision made to make available the Right to Constitutional Remedies to every citizen .
 
 ## Habeas Corpus
-- **You must have the body****
+- **You must have the body**
 - Bring the detained person before the court so as to enable the court to decide the validity, jurisdiction or justification for such detention
 - **Gopalan vs GoI**
 
 ## Quo Warranto
-- **What is your authority****
+- **What is your authority**
 - Used to judicially control executive action in the matter of making appointments to public offices under relevant statutory provisions
 
 ## Mandamus
@@ -155,7 +172,7 @@ Power to issue writs is primarily a provision made to make available the Right t
 - **Bombay Municipality vs Advance Builders**
 
 ## Certiorari
-- **inform****
+- **inform**
 - issued by Supreme Court (Art. 32)
 - issued by High Court (Art. 226)
 - direct inferior courts, tribunals or authorities
@@ -168,6 +185,19 @@ Power to issue writs is primarily a provision made to make available the Right t
 	- proceeds to act in violation of rules of natural justice
 	- proceeds to act under a law which is itself ultra vires or unconstitutional
 	- proceeds to act in contravention of fundamental rights
+
+---
+# Amendments
+|Amendment|Year|Importance|
+|---|---|---|
+|7|1956|Reorganisation of states on linguistic basis and abolition of class A, B, C and D states|
+|42|1976|Fundamental Duties prescribed, India became Socialist Secular Republic|
+|44|1978|Right to Property deleted|
+|45|1980|Extended the period of SC/ST reservation for 10 more years (till 1990)|
+|52|1985|Defection to another party after election made illegal|
+|61|1989|Voting age reduced to 18 from 21|
+|86|2002|Free and compulsory education to children b/w 6 and 14|
+|101|2016|GST|
 
 ---
 # FR, FD, DPSP

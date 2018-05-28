@@ -51,7 +51,7 @@
 	* Ruled Bactria
 	* Menander
 		* Had his capital at sialkot
-	* First to **issue coins which can be definitely attributed to kings****
+	* First to **issue coins which can be definitely attributed to kings**
 * Shakas
 	* Maves
 		* first king
@@ -73,7 +73,7 @@
 		* most famous ruler
 		* started **Saka era** AD 78
 	* Gandhara school of art with indian tradition and greek techniques received royal patronage
-	* **Issued gold coins with higher degree of metallic purity than in Gupta gold coins****
+	* **Issued gold coins with higher degree of metallic purity than in Gupta gold coins**
 * Satavahana
 	* Succeeded Mauryas in central india
 	* Simuka
@@ -133,7 +133,7 @@
 	* Harisena wrote allahabad inscription
 	* Adopted the title of **kaviraj**
 * Chandragupta II
-	* **first gupta ruler to issue silver coin****
+	* **first gupta ruler to issue silver coin**
 	* extended limits of empire by marriage, alliances and conquest
 	* made Ujjain as capital
 	* Fa-hien visited India
@@ -261,7 +261,7 @@
 		* built Siva temple of Rajarajeshwara at Tanjore
 	* Chola empire was divided into Mandlams(provinces)
 	* Mandlams were divided into Valanadu and Nadu
-	* **Ur -> general assembly of village****
-	* **Sabha -> gathering of adult men****
-	* **Nagram -> gathering of trader and merchants****
+	* **Ur -> general assembly of village**
+	* **Sabha -> gathering of adult men**
+	* **Nagram -> gathering of trader and merchants**
 	* nayanars and alvars existed
