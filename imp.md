@@ -97,4 +97,156 @@
 	- a theoretical form of energy postulated to act in opposition of gravity and to occupy the entire universe, accounting for most of the energy in it and causing its expansion to accelerate
 - Black hole
 	- a region of space having a gravitational field so intense that no matter or radiation can escape
-- 
+
+## V.V.Imp.
+- The number of judges can be altered by **Parliament by law**
+- Saptanga theory of state was given by **Kautilya in Arthashastra**
+- **Ram Das** was the religious guru of Shivaji
+- **Swami vivekananda** founded **Ramakrishna Mission** in 1896 to carry on humanitarian relief and social work
+- **Agenda 21** related to Sustainable development
+- **Hornbill festival** celebrated in **Nagaland**
+- **Leaching** causes formation of Laterite soil
+- Border with India
+	- Bangladesh
+	- China
+	- Pakistan
+	- Nepal
+	- Myanmar
+	- Bhutan
+	- Afghanistan
+- Export value (decr. value)
+	- Refined Petroleum
+	- Basmati Rice
+- **Not less than 1/10th of total number** of members of house is known as quorum
+- Innovate in India
+	- mission to accelerate biopharmaceutical development in india
+	- implemented by **Biotechnology Industry Research Assistance Council**
+- Addis Ababa Action Agenda(AAAA)
+	- associated with **UN**
+	- related to **Monterrey Consensus**
+- Intl. Securities Identification Number
+	- code that uniquely identifies a specific securities issue
+	- country's representative **National Numbering Agency** allocates ISIN
+- An **OCI is a foreigner** who
+	- enjoys right to enter India, without Visa
+	- reside in India for any length of time
+- **Gross value added** at basic price
+	- is the sum of total gva at factor cost and **production tax** like stamp duty and property tax
+	- provides details of all burden that is faced by the sellers in the market
+- **Vyuhvada** associated with **Vaishnavism**
+- **Fatwa-i-alamgiri** was given under **Aurangzeb**
+- **Patanal(South America)** is **World's largest wetland system**
+- **Sangai festival** is celebrated in **Manipur**
+- Indian agriculture faces problem of
+	- underemployment
+	- disguised employment
+- DART Mission
+	- it is part of Asteroid Impact Deflection Assessment(AIDA) mission
+	- developed by **European State Agency**
+- Chief Election Commissioner
+	- appointed by President
+	- conventionally senior-most election commissioner
+	- tenure of six years or up to age of 65 years, whichever is earlier
+	- enjoys same official status, salary and perks as available to judges of Supreme court
+	- can be removed only through impeachment by parliament (2/3rd)
+	- member of **Indian civil services**
+- MERIT app is associated with tracking power distribution
+- fundamental rights were embodied to ensure
+	- secularism
+	- democratic gov.
+	- individual liberty
+- Democratic socialism
+	- political ideology
+	- under DPSP
+	- advocates political democracy alongside social democracy
+- Acids
+	- |Acid|Found in|
+	|---|---|
+	|Formic|Ant's sting|
+	|Acetic|Vinegar|
+	|Citric|Citrus fruits|
+	|Lactic|Curd|
+	|Oxalic|Spinach|
+	|Ascorbic|Amla and other citrus fruits|
+	|Tartaric|Tamarind, grapes, mangoes etc|
+- Earth crust
+	- most abundant metal - Al
+	- second most abundant metal - Fe
+	- most abundant element - O2
+	- second most abundant element - Si
+- **Dirty floating** means manipulation in currency exchange rate by RBI
+- **Gresham's law** suggests that bad money tends to drive good money out of circulation when both are full legal tender
+- **Gomira Mukha Nach** is from West Bengal
+- UN Development index is based on the assumption that a country's development is a function of social, demographic and economic factors
+- RBI publishes figures for four alternative measures of money supply
+	- CU = Currency held by public
+	- DD = net demand deposits held by commercial banks
+	- M1, M2 = narrow money
+	- **M3**, M4 = broad money
+	- M1 = CU + DD
+	- M2 = M1 + savings deposits with Post office savings bank
+	- M3 = M1 + Net time deposits of commercial banks
+	- M4 = M3 + Total deposits with Post office savings organisation(excluding NSC)
+- Abscisic acid inhibits plant growth
+- Auxins are synthesized at the tip where light received by plant, help in cell growth
+- Gibberellins help in growth of stem
+- Seychelles > Mauritius > Reunion > Comoros (North -> South)
+- **Groundwater** is largest reservoir of fresh water
+- Cooperative banks accepts deposits from and lend money only to their members
+- Payment banks can't lend money
+- Small bank can perform both functions
+- NABARD can't lend or deposit with general public
+- CPI vs GDP deflator
+	- goods purchased by consumers do not represent all goods which are produced in a country. GDPD takes into account all such goods and services
+	- CPI includes prices of goods consumed by representative cosumer, hence it includes prices of imported goods. GDPD does not include such prices
+	- Weights are constant in CPI, but they differ acc. to production level of each good in GDPD
+- Wholesale and long term finance banks
+	- exempted from SLR
+	- focus primarily on lending to infrastructure sector and small, medium corportate businesses
+- BPL list
+	- households without shelter
+	- destitute/living on alms
+	- manual scavengers
+	- primitive tribal groups
+	- legally released bonded labours
+- Jajmani system 
+	- a small daily allowance and diet money
+	- given to blacksmiths, carpenters and goldsmiths
+	- by zamindars (18th century)
+- Basic needs approach
+	- initially proposed by ILO
+	- question of human choices is ignored	
+- Welfare approach
+	- looks at human beings as beneficiaries or targets of all development activities
+- Global Forex Committee
+	- set up under guidance of Bank for International Settlements
+	- Promote and maintain FX Global code
+- Conflict b/w RS and LS
+	- Money - Lok sabha has overrridng powers
+	- Constitutional Amendment - must be passed by each house seperately
+	- Ordinary - joint meeting
+	- Financial - joint meeting
+- Bhatiyali is river song of WB
+- Bharat Stage Emission Norms
+	- inspired from Euro norms
+	- define max limit of pollutants that can be emitted from internal combustion engines used in vehicles
+	- BS-IV followed by major cities and BS-III followed by rest of country in india
+	- GoI has ambitious plan of skipping BS-V and directly enacting BS-VI norms
+- Asia Africa Corridor
+	- India
+	- Japan
+- Investment Facilition MEchanism
+	- India
+	- EU
+- Unit tax is tax imposed on per unit sale of output at certain rate
+- Local self government
+	- uniform 3 tier panchayati raj structure
+	- all levels of panchayati raj are elected directly by the people
+- Pant Mirza Agreement
+	- facilitates visits by nationals of India and PAkistan to mutually agreed list of religious shrines in each other's country
+	- under **Bilateral Protocol on Visits to Religious Shrines** signed in 1974
+- |Port|Purpose|
+	|---|---|
+	|Port of Call|Intermediate stop for a ship|
+	|Packet Station|Ferry Port|
+	|Entrepot Port|Trans-shipment port|

@@ -120,3 +120,33 @@
 |Uri|Jhelum|Jammu & Kashmir|
 |Ramagundam|Godavari|Andhra Pradesh|
 |Dummaguden|Godavari|Andhra Pradesh|
+
+---
+# Straits
+|Name|Connects|Seperates|
+|---|---|---|
+|Palk|Bay of Bengal/Gulf of Mannar|India/Sri Lanka|
+|Malacca|Pacific Ocean/Indian Ocean|Malaysia/Indonesia|
+|Makassar|Celebes Sea/Java Sea|Borneo/Sulawesi|
+|Sunda|Java sea/Indian Ocean|Java islands/Sumatra islands|
+|Tsugaru|Sea of Japan/PAcific Ocean|Honshu/Hokkaido|
+|Strait of Tartary|Sea of Okhatsk/Sea of Japan|Russian island of Sakhalin/Mainland Russia|
+|Formosa|South China Sea/East China Sea|Taiwan/China|
+|Hormuz|Persian gulf/gulf of omman|UAE&Oman/Iran|
+|Bab al-Mandab|Red sea/Gulf of aden|Yemen/Ethiopia|
+|Mozambique|Within Indian Ocean|Mozambique/Madagascar|
+|Bosphorous|Black Sea/Sea of Marmara|European Turkey/Asian Turkey|
+|Oranto|Adriatic Sea/Ionian Sea|Italy/Albania|
+|Messina Strait|Terranian Sea/Ionian Sea|Sicily Islands/Calabria Italy|
+|Gibraltar Strait|Atlantic Ocean/Mediterranean Sea|Spain/Morocco|
+|Torres|Pacific|Australia/New Guinea|
+|Bass|Tasman Sea/Pacific Ocean|Tasmania/Victoria|
+|Cook|Tasman Sea/Pacific OCean|South and North Islands of New Zealand|
+|Yucatan strait|Gulf of mexico/Carribean Sea|Cuba/Mexico|
+|Florida|Gulf of mexico/Atlantic Ocean|USA/Cuba|
+|Hudson|Atlantic OCean/Labrador Sea|Canada|
+|Davis Strait|Baffis bay/Atlantic OCean|Greenland/Canada|
+|Denmark|Atlantic Ocean|Greenland/Iceland|
+|Dover|North Sea/English Channel|England/France|
+|North Strait|Irish Sea/Atlantic OCean|Ireland/Scotland|
+|Bering|Arctic Ocean/Pacific Ocean|Russia/USA|
