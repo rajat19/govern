@@ -26,6 +26,6 @@
 - <a href="imp.html">Other important News</a>
 
 ## Pdf (No web page)
-- <a href="../pdf/gov_schemes_1.pdf">Gov. Schemes 1 (Next IAS)</a>
-- <a href="../pdf/gov_schemes_2.pdf">Gov. Schemes 2 (Next IAS)</a>
-- <a href="../pdf/imp_articles.pdf">Important Articles</a>
+- <a href="pdf/gov_schemes_1.pdf">Gov. Schemes 1 (Next IAS)</a>
+- <a href="pdf/gov_schemes_2.pdf">Gov. Schemes 2 (Next IAS)</a>
+- <a href="pdf/imp_articles.pdf">Important Articles</a>
