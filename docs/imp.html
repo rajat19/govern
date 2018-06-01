@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>imp.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="top-250-expected">Top 250 Expected</h1>
+<h2 id="1-to-10">1 to 10</h2>
+<ul>
+<li>Article 164(1)
+<ul>
+<li>Chief minister appointed by governor</li>
+<li>UP has 2 deputy CMs</li>
+</ul>
+</li>
+<li>ICEGATE
+<ul>
+<li>e-commerce portal of Central Board of Excise &amp; Custom</li>
+</ul>
+</li>
+<li>Import of major arms
+<ul>
+<li><strong>India largest importer</strong></li>
+<li>Russia exports to india most</li>
+<li>USA largest exporter</li>
+</ul>
+</li>
+<li>Project Unnati
+<ul>
+<li>Ministry of shipping</li>
+<li>a port transformation project</li>
+<li>focus is on 12 major ports</li>
+</ul>
+</li>
+<li>Clean Seas Campaign
+<ul>
+<li><strong>New zealand</strong> recently joined</li>
+<li>Aims to engage gov., general public, civil society and private sector in fight against marine plastic</li>
+</ul>
+</li>
+<li>CIPAM
+<ul>
+<li>Cell for IPR Promotion and Mgtt.</li>
+<li>slogan - <strong>Creative India, Innovative India</strong></li>
+</ul>
+</li>
+<li>Energy transition index
+<ul>
+<li>Released by <strong>World Economic Forum</strong></li>
+<li>List topped by Sweden</li>
+<li>India at 78/114</li>
+</ul>
+</li>
+<li>North East Special Infrastructure Development Scheme
+<ul>
+<li>Completely funded by GOI</li>
+<li>launched for 2017 to 2020</li>
+<li>Funds distributed to 8 NE states</li>
+</ul>
+</li>
+<li>Citizen Services' app
+<ul>
+<li>Launched by NCRB</li>
+<li>bouquet of 9 police related services, for citizen</li>
+<li><strong>SOS provision</strong> is made available to send emergency messages to friends and family</li>
+</ul>
+</li>
+<li>Cyber Gram Project
+<ul>
+<li>Launched by <strong>Ministry of Minority Affairs</strong></li>
+<li>Digital literacy in a minority dominated village of <strong>Chandauli</strong> in Alwar, Rajasthan</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-to-20">11 to 20</h2>
+<ul>
+<li>E-office
+<ul>
+<li>Under <strong>Department of Administrative Reforms</strong></li>
+<li>Ministry of Personal Public Grievances and Pension</li>
+</ul>
+</li>
+<li>International Criminal Court
+<ul>
+<li>Established after Rome statute 1/7/02</li>
+<li>Center at Hague</li>
+<li><strong>India not a party</strong></li>
+<li>Arabic, Chinese, English, French, Russia, Spanish</li>
+</ul>
+</li>
+<li>Newton Bhabha Fund
+<ul>
+<li>Help by UK</li>
+<li>3 categories
+<ul>
+<li>People</li>
+<li>Programmes</li>
+<li>Translation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>80:20 Gold scheme
+<ul>
+<li>introduced with aim of curbing gold imports</li>
+<li>policy was aimed at tackling the widening current account deficit</li>
+</ul>
+</li>
+<li>Double Taxation Avoidance Agreement
+<ul>
+<li>Taxpayer resides in one country and earns in other country</li>
+</ul>
+</li>
+<li>Base erosion and profit sharing
+<ul>
+<li>refers to tax planning strategies that exploit gaps and mismatches in tax rules to artificially shift profits to low or no-tax locations where there is little or no economic activity</li>
+<li>headed by OECD</li>
+</ul>
+</li>
+<li>UN Commision on Status of Women
+<ul>
+<li>Funcitonal commision of EcoSoc established in 1946</li>
+<li>Rural entrepreneur Sunita Kashyap was hailed as a symbol of Women's empowerment of 62nd UNCOSOW 2018</li>
+</ul>
+</li>
+<li>LaQshya Programme
+<ul>
+<li>reduce preventable maternal and newborn mortality, morbidity and stillbirths</li>
+</ul>
+</li>
+<li>Global Theatre Olympics
+<ul>
+<li>Delhi would host</li>
+<li>Organised by ministry of culture</li>
+</ul>
+</li>
+<li>World Happiness Report
+<ul>
+<li>released by <strong>Sustainable Developer Solution Network</strong></li>
+<li>Finland 1st</li>
+<li>india 133/156</li>
+<li>Burundi last</li>
+</ul>
+</li>
+</ul>
+<h2 id="21-to-30">21 to 30</h2>
+<ul>
+<li>Intangible Cultural Heritage
+<ul>
+<li>Created by UNESCO</li>
+<li>Yoga and Nawrouz in 2016</li>
+<li>Kumbhmelad added in 2017 -&gt; making total 13</li>
+</ul>
+</li>
+<li>Ministry of culture runs
+<ul>
+<li>Performing Arts Grants Scheme</li>
+<li>National Memorial Scheme</li>
+<li>Scheme for Cultural Heritage Youth Leadership Programme</li>
+</ul>
+</li>
+<li>National Building Construction Corporation is nodal agency for projects under
+<ul>
+<li>Pradhan Mantri Gram Sadak Yojana</li>
+<li>Development work in NE Region</li>
+<li>Solid Waster Management</li>
+<li>Jawaharlal Nehru National Urban Renewal Mission</li>
+</ul>
+</li>
+<li>National Commission for Protection of child rights
+<ul>
+<li>It is a statutory body</li>
+<li>under commision for protection for child rights</li>
+<li>under <strong>Ministry of Women and child</strong></li>
+<li>children are under age of 18</li>
+</ul>
+</li>
+<li>Dark matter
+<ul>
+<li>type of matter which has not yet been directly observed, but its thought to form a fundamental part of the universe</li>
+</ul>
+</li>
+<li>Dark energy
+<ul>
+<li>a theoretical form of energy postulated to act in opposition of gravity and to occupy the entire universe, accounting for most of the energy in it and causing its expansion to accelerate</li>
+</ul>
+</li>
+<li>Black hole
+<ul>
+<li>a region of space having a gravitational field so intense that no matter or radiation can escape</li>
+</ul>
+</li>
+</ul>
+<h2 id="vvimp">V.V.Imp.</h2>
+<ul>
+<li>The number of judges can be altered by <strong>Parliament by law</strong></li>
+<li>Saptanga theory of state was given by <strong>Kautilya in Arthashastra</strong></li>
+<li><strong>Ram Das</strong> was the religious guru of Shivaji</li>
+<li><strong>Swami vivekananda</strong> founded <strong>Ramakrishna Mission</strong> in 1896 to carry on humanitarian relief and social work</li>
+<li><strong>Agenda 21</strong> related to Sustainable development</li>
+<li><strong>Hornbill festival</strong> celebrated in <strong>Nagaland</strong></li>
+<li><strong>Leaching</strong> causes formation of Laterite soil</li>
+<li>Border with India
+<ul>
+<li>Bangladesh</li>
+<li>China</li>
+<li>Pakistan</li>
+<li>Nepal</li>
+<li>Myanmar</li>
+<li>Bhutan</li>
+<li>Afghanistan</li>
+</ul>
+</li>
+<li>Export value (decr. value)
+<ul>
+<li>Refined Petroleum</li>
+<li>Basmati Rice</li>
+</ul>
+</li>
+<li><strong>Not less than 1/10th of total number</strong> of members of house is known as quorum</li>
+<li>Innovate in India
+<ul>
+<li>mission to accelerate biopharmaceutical development in india</li>
+<li>implemented by <strong>Biotechnology Industry Research Assistance Council</strong></li>
+</ul>
+</li>
+<li>Addis Ababa Action Agenda(AAAA)
+<ul>
+<li>associated with <strong>UN</strong></li>
+<li>related to <strong>Monterrey Consensus</strong></li>
+</ul>
+</li>
+<li>Intl. Securities Identification Number
+<ul>
+<li>code that uniquely identifies a specific securities issue</li>
+<li>country's representative <strong>National Numbering Agency</strong> allocates ISIN</li>
+</ul>
+</li>
+<li>An <strong>OCI is a foreigner</strong> who
+<ul>
+<li>enjoys right to enter India, without Visa</li>
+<li>reside in India for any length of time</li>
+</ul>
+</li>
+<li><strong>Gross value added</strong> at basic price
+<ul>
+<li>is the sum of total gva at factor cost and <strong>production tax</strong> like stamp duty and property tax</li>
+<li>provides details of all burden that is faced by the sellers in the market</li>
+</ul>
+</li>
+<li><strong>Vyuhvada</strong> associated with <strong>Vaishnavism</strong></li>
+<li><strong>Fatwa-i-alamgiri</strong> was given under <strong>Aurangzeb</strong></li>
+<li><strong>Patanal(South America)</strong> is <strong>World's largest wetland system</strong></li>
+<li><strong>Sangai festival</strong> is celebrated in <strong>Manipur</strong></li>
+<li>Indian agriculture faces problem of
+<ul>
+<li>underemployment</li>
+<li>disguised employment</li>
+</ul>
+</li>
+<li>DART Mission
+<ul>
+<li>it is part of Asteroid Impact Deflection Assessment(AIDA) mission</li>
+<li>developed by <strong>European State Agency</strong></li>
+</ul>
+</li>
+<li>Chief Election Commissioner
+<ul>
+<li>appointed by President</li>
+<li>conventionally senior-most election commissioner</li>
+<li>tenure of six years or up to age of 65 years, whichever is earlier</li>
+<li>enjoys same official status, salary and perks as available to judges of Supreme court</li>
+<li>can be removed only through impeachment by parliament (2/3rd)</li>
+<li>member of <strong>Indian civil services</strong></li>
+</ul>
+</li>
+<li>MERIT app is associated with tracking power distribution</li>
+<li>fundamental rights were embodied to ensure
+<ul>
+<li>secularism</li>
+<li>democratic gov.</li>
+<li>individual liberty</li>
+</ul>
+</li>
+<li>Democratic socialism
+<ul>
+<li>political ideology</li>
+<li>under DPSP</li>
+<li>advocates political democracy alongside social democracy</li>
+</ul>
+</li>
+<li>Acids
+<table>
+<thead>
+<tr>
+<th>Acid</th>
+<th>Found in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formic</td>
+<td>Ant's sting</td>
+</tr>
+<tr>
+<td>Acetic</td>
+<td>Vinegar</td>
+</tr>
+<tr>
+<td>Citric</td>
+<td>Citrus fruits</td>
+</tr>
+<tr>
+<td>Lactic</td>
+<td>Curd</td>
+</tr>
+<tr>
+<td>Oxalic</td>
+<td>Spinach</td>
+</tr>
+<tr>
+<td>Ascorbic</td>
+<td>Amla and other citrus fruits</td>
+</tr>
+<tr>
+<td>Tartaric</td>
+<td>Tamarind, grapes, mangoes etc</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Earth crust
+<ul>
+<li>most abundant metal - Al</li>
+<li>second most abundant metal - Fe</li>
+<li>most abundant element - O2</li>
+<li>second most abundant element - Si</li>
+</ul>
+</li>
+<li><strong>Dirty floating</strong> means manipulation in currency exchange rate by RBI</li>
+<li><strong>Gresham's law</strong> suggests that bad money tends to drive good money out of circulation when both are full legal tender</li>
+<li><strong>Gomira Mukha Nach</strong> is from West Bengal</li>
+<li>UN Development index is based on the assumption that a country's development is a function of social, demographic and economic factors</li>
+<li>RBI publishes figures for four alternative measures of money supply
+<ul>
+<li>CU = Currency held by public</li>
+<li>DD = net demand deposits held by commercial banks</li>
+<li>M1, M2 = narrow money</li>
+<li><strong>M3</strong>, M4 = broad money</li>
+<li>M1 = CU + DD</li>
+<li>M2 = M1 + savings deposits with Post office savings bank</li>
+<li>M3 = M1 + Net time deposits of commercial banks</li>
+<li>M4 = M3 + Total deposits with Post office savings organisation(excluding NSC)</li>
+</ul>
+</li>
+<li>Abscisic acid inhibits plant growth</li>
+<li>Auxins are synthesized at the tip where light received by plant, help in cell growth</li>
+<li>Gibberellins help in growth of stem</li>
+<li>Seychelles &gt; Mauritius &gt; Reunion &gt; Comoros (North -&gt; South)</li>
+<li><strong>Groundwater</strong> is largest reservoir of fresh water</li>
+<li>Cooperative banks accepts deposits from and lend money only to their members</li>
+<li>Payment banks can't lend money</li>
+<li>Small bank can perform both functions</li>
+<li>NABARD can't lend or deposit with general public</li>
+<li>CPI vs GDP deflator
+<ul>
+<li>goods purchased by consumers do not represent all goods which are produced in a country. GDPD takes into account all such goods and services</li>
+<li>CPI includes prices of goods consumed by representative cosumer, hence it includes prices of imported goods. GDPD does not include such prices</li>
+<li>Weights are constant in CPI, but they differ acc. to production level of each good in GDPD</li>
+</ul>
+</li>
+<li>Wholesale and long term finance banks
+<ul>
+<li>exempted from SLR</li>
+<li>focus primarily on lending to infrastructure sector and small, medium corportate businesses</li>
+</ul>
+</li>
+<li>BPL list
+<ul>
+<li>households without shelter</li>
+<li>destitute/living on alms</li>
+<li>manual scavengers</li>
+<li>primitive tribal groups</li>
+<li>legally released bonded labours</li>
+</ul>
+</li>
+<li>Jajmani system
+<ul>
+<li>a small daily allowance and diet money</li>
+<li>given to blacksmiths, carpenters and goldsmiths</li>
+<li>by zamindars (18th century)</li>
+</ul>
+</li>
+<li>Basic needs approach
+<ul>
+<li>initially proposed by ILO</li>
+<li>question of human choices is ignored</li>
+</ul>
+</li>
+<li>Welfare approach
+<ul>
+<li>looks at human beings as beneficiaries or targets of all development activities</li>
+</ul>
+</li>
+<li>Global Forex Committee
+<ul>
+<li>set up under guidance of Bank for International Settlements</li>
+<li>Promote and maintain FX Global code</li>
+</ul>
+</li>
+<li>Conflict b/w RS and LS
+<ul>
+<li>Money - Lok sabha has overrridng powers</li>
+<li>Constitutional Amendment - must be passed by each house seperately</li>
+<li>Ordinary - joint meeting</li>
+<li>Financial - joint meeting</li>
+</ul>
+</li>
+<li>Bhatiyali is river song of WB</li>
+<li>Bharat Stage Emission Norms
+<ul>
+<li>inspired from Euro norms</li>
+<li>define max limit of pollutants that can be emitted from internal combustion engines used in vehicles</li>
+<li>BS-IV followed by major cities and BS-III followed by rest of country in india</li>
+<li>GoI has ambitious plan of skipping BS-V and directly enacting BS-VI norms</li>
+</ul>
+</li>
+<li>Asia Africa Corridor
+<ul>
+<li>India</li>
+<li>Japan</li>
+</ul>
+</li>
+<li>Investment Facilition MEchanism
+<ul>
+<li>India</li>
+<li>EU</li>
+</ul>
+</li>
+<li>Unit tax is tax imposed on per unit sale of output at certain rate</li>
+<li>Local self government
+<ul>
+<li>uniform 3 tier panchayati raj structure</li>
+<li>all levels of panchayati raj are elected directly by the people</li>
+</ul>
+</li>
+<li>Pant Mirza Agreement
+<ul>
+<li>facilitates visits by nationals of India and PAkistan to mutually agreed list of religious shrines in each other's country</li>
+<li>under <strong>Bilateral Protocol on Visits to Religious Shrines</strong> signed in 1974</li>
+</ul>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Port of Call</td>
+<td>Intermediate stop for a ship</td>
+</tr>
+<tr>
+<td>Packet Station</td>
+<td>Ferry Port</td>
+</tr>
+<tr>
+<td>Entrepot Port</td>
+<td>Trans-shipment port</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wildlife.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="biosphere-reserves">Biosphere Reserves</h1>
+<ul>
+<li>NP  - National Park</li>
+<li>WS  - Wildlife Sanctuary</li>
+<li>WHS - UNSECO World Heritage Site</li>
+<li>PT  - Project Tiger</li>
+<li>PE  - Project Elephant</li>
+<li>TR  - Tiger Reserve</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Includes</th>
+<th>State</th>
+<th>Location</th>
+<th>Imp. Animal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cold Desert</td>
+<td>NP</td>
+<td>Himachal Pradesh</td>
+<td>Lahaul and Spiti</td>
+<td>Snow leopard</td>
+</tr>
+<tr>
+<td>Nanda Devi</td>
+<td>Nanda Devi NP</td>
+<td>Uttarakhand</td>
+<td>Chamoli, Pithoragarh &amp; Bageshwar</td>
+<td>Snow leopard, Black bear</td>
+</tr>
+<tr>
+<td>Kanchenjunga</td>
+<td>Kanchenjunga NP</td>
+<td>Sikkim</td>
+<td></td>
+<td>Snow leopard, Red panda</td>
+</tr>
+<tr>
+<td>Dihang Dibang</td>
+<td>Mouling NP, Dibang WS</td>
+<td>Arunachal Pradesh</td>
+<td>Dibang Valley, Upper Siang, West Siang</td>
+<td>Mishimi takin, Musk deer</td>
+</tr>
+<tr>
+<td>Dibru-Saikhowa</td>
+<td></td>
+<td>Arunachal Pradesh</td>
+<td>Dibrugarh and Tinsukia districts</td>
+<td>Golden langur</td>
+</tr>
+<tr>
+<td>Manas</td>
+<td>Manas NP, WHS, PE, PT</td>
+<td>Assam</td>
+<td></td>
+<td>Golden langur, Red panda</td>
+</tr>
+<tr>
+<td>Nokerk</td>
+<td>Nokerk NP</td>
+<td>Meghalaya</td>
+<td>West Garo Hills</td>
+<td>Red panda</td>
+</tr>
+<tr>
+<td>Kutch</td>
+<td></td>
+<td>Gujarat</td>
+<td>Kutch, Rajkot, sundernagar</td>
+<td>Indian wild ass</td>
+</tr>
+<tr>
+<td>Panchmarhi</td>
+<td></td>
+<td>Madhya Pradesh</td>
+<td>Hoshingabad, Betul, Chindwara</td>
+<td>Giant squirrel, Flying squirrel</td>
+</tr>
+<tr>
+<td>Panna</td>
+<td>Panna NP</td>
+<td>Madhya Pradesh</td>
+<td>Panna, Chhatrapur</td>
+<td>Tiger, Chiital, Sambhar, Chinkara, Sloth Bear</td>
+</tr>
+<tr>
+<td>Achanakmar-Amarkantak</td>
+<td></td>
+<td>Chhattisgarh, Madhya Pradesh</td>
+<td>Bilaspur, Anuppur</td>
+<td>Four horned antelope, Indian wild dog, White runt vulture</td>
+</tr>
+<tr>
+<td>Sundarban</td>
+<td>Sundarban NP, TR, WHS</td>
+<td>West Bengal</td>
+<td></td>
+<td>Bengal Tiger</td>
+</tr>
+<tr>
+<td>Simplipal</td>
+<td>Simplipal NP</td>
+<td>Orissa</td>
+<td>Mayurbhanj</td>
+<td>Gaur, Bengal tiger, Asian elephant</td>
+</tr>
+<tr>
+<td>Seshachalam</td>
+<td></td>
+<td>Andhra Pradesh</td>
+<td>Chittoor, Kadappa</td>
+<td>Slender lauris</td>
+</tr>
+<tr>
+<td>Niligiri</td>
+<td>NP- Bandipur, MAdumalai, Nagerhole, WS- Wayanad, Satyamangalam</td>
+<td>Tamil Nadu, Kerala, Karnataka</td>
+<td>Western Ghats - Madumalai, Nagarhole</td>
+<td></td>
+</tr>
+<tr>
+<td>Agasthyamala</td>
+<td></td>
+<td>Kerala, Tamil Nadu</td>
+<td></td>
+<td>Niligiri nahar, Elephant</td>
+</tr>
+<tr>
+<td>Gulf of Mannar</td>
+<td>Gulf of Mannar NP</td>
+<td>Tamil Nadu</td>
+<td>Tuttikodi, Dhanushkodi</td>
+<td>Dolphin, Whale, Dugongs</td>
+</tr>
+<tr>
+<td>Great Nicobar</td>
+<td>Campbell Bay NP, Galatea NP</td>
+<td>Andaman &amp; Nicobar</td>
+<td></td>
+<td>Nicobar long tailed macaque, salt water crocodile, malayan box turtle, sea turtle, nicobar tea shrew, reticulated python, coconut crab</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="national-parks">National Parks</h1>
+<ul>
+<li>jammu &amp; kashmir
+<ul>
+<li>dachigam
+<ul>
+<li>kashmiri Stag</li>
+</ul>
+</li>
+<li>hemis
+<ul>
+<li>asiatic ibex</li>
+<li>snow leopard</li>
+<li>great tibetan sheep</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>himachal pradesh
+<ul>
+<li>great himalayan
+<ul>
+<li>blue sheep</li>
+<li>snow leopard</li>
+<li>brown bear</li>
+<li>himalayan taher</li>
+<li>musk deer</li>
+</ul>
+</li>
+<li>maharana pratap
+<ul>
+<li>barking deer</li>
+<li>sambhar</li>
+<li>wild boar</li>
+<li>leopard</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>uttarakhand
+<ul>
+<li>jim corbett
+<ul>
+<li>bengal tiger</li>
+<li>indian elephant</li>
+<li>black bear</li>
+<li>leopard</li>
+</ul>
+</li>
+<li>rajaji
+<ul>
+<li>elephant</li>
+<li>chhittal</li>
+</ul>
+</li>
+<li>valley of flowers
+<ul>
+<li>asiatic black bear</li>
+<li>musk deer</li>
+<li>red fox</li>
+<li>blue sheep</li>
+<li>brown bear</li>
+<li>leopard</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>uttar pradesh
+<ul>
+<li>dudhwa
+<ul>
+<li>tiger</li>
+<li>swamp deer</li>
+</ul>
+</li>
+<li>chandra prabha</li>
+</ul>
+</li>
+<li>bihar
+<ul>
+<li>bhimbandh
+<ul>
+<li>tiger</li>
+<li>leopard</li>
+<li>peafowl</li>
+<li>rabbit</li>
+<li>barking deer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>jharkhand
+<ul>
+<li>betla</li>
+<li>palamau ws</li>
+<li>hazaribag ws</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="wildlife-and-ecology-related-data">Wildlife and Ecology related data</h1>
+<h2 id="aquatic-organisms">Aquatic organisms</h2>
+<ul>
+<li><strong>Neustons</strong> - Unattached organisms which live at air-water interface such as floating plants, etc.</li>
+<li><strong>Periphytons</strong> - They remain attached to stems and leaves of rooted plants or substances emerging aboce the bottom mud such as sessile algae</li>
+<li><strong>Planktons</strong>
+<ul>
+<li>These are free floating species with limited powers of locomotion</li>
+<li>This group includes
+<ul>
+<li>microscopic plants like algae (<strong>phytoplanktons</strong>)</li>
+<li>animals like crustaceans and protozoans (<strong>zooplanktons</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Nektons</strong> - This group includes animals which are swimmers
+<ul>
+<li>The animals range in size from the swimming insects to the the largest animals, <strong>blue whale</strong></li>
+</ul>
+</li>
+<li><strong>Benthos</strong> - These are found living in the bottom of water mass</li>
+</ul>
+<hr>
+<h2 id="ecological-relationships">Ecological Relationships</h2>
+<table>
+<thead>
+<tr>
+<th>Effect on X</th>
+<th>Effect on Y</th>
+<th>Type of interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>Competition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>0</td>
+<td>Amensalism</td>
+</tr>
+<tr>
+<td>-</td>
+<td>+</td>
+<td>Exploitation</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>Neutralism</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+</td>
+<td>Commensalism</td>
+</tr>
+<tr>
+<td>+</td>
+<td>+</td>
+<td>Mutualism</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amensalism">Amensalism</h3>
+<ul>
+<li>Organism inflicts harm to another organism without any costs or benefits received by itself</li>
+<li>eg. Sheep trampling grass</li>
+</ul>
+<h3 id="exploitation">Exploitation</h3>
+<ul>
+<li>one species benefits at the expense of other</li>
+<li>eg. Predation, Parasitism, Herbivory</li>
+<li>Batesian mimicry is an exploitative interaction, where one species has evolved to mimic another, to the advantage of copying species but to the detriment of the species being mimicked</li>
+</ul>
+<h3 id="neutralism">Neutralism</h3>
+<ul>
+<li>interact but do not affect each other</li>
+</ul>
+<h3 id="commensalism">Commensalism</h3>
+<ul>
+<li>benefits one organism and the other organism is neither benefited nor harmed</li>
+</ul>
+<h3 id="mutualism">Mutualism</h3>
+<ul>
+<li>species derive mutual benefit, for example an increased carrying capacity</li>
+</ul>
+<h3 id="competition">Competition</h3>
+<ul>
+<li>interaction in which the fitness of one is lowered by the presence of another</li>
+</ul>
+<hr>
+<h1 id="iucn-red-list">IUCN Red list</h1>
+<h2 id="red-data-book">Red Data Book</h2>
+<ul>
+<li>Listing of threatened species</li>
+<li><strong>Gland, Switzerland</strong></li>
+<li>First issued in 1966</li>
+<li>Red means danger</li>
+<li>Includes CR, EN, VU, NT</li>
+<li>Critically endangered
+<ul>
+<li>reduction in population &gt;90% over last 10 year</li>
+<li>number is less than 50 mature individuals</li>
+<li>high risk of extinction in wild</li>
+</ul>
+</li>
+</ul>
+<h2 id="critically-endangered">Critically Endangered</h2>
+<ul>
+<li>Pygmy Hog
+<ul>
+<li>ecological indicator of grassland</li>
+<li><strong>only in Sonai Rupai area, Manas WS, Assam</strong></li>
+<li>due to degradation of grasslands, dry season burning, grazing</li>
+</ul>
+</li>
+<li>Andaman white toothed shrew
+<ul>
+<li>endemic to india</li>
+<li>nocturnal</li>
+<li><strong>mount harriet in south andaman islands</strong></li>
+<li><strong>campbell bay NP, A&amp;N</strong></li>
+</ul>
+</li>
+<li>Elvira rat
+<ul>
+<li>large rock rat</li>
+<li>endemic to india</li>
+<li><strong>only in eastern ghats of tamil nadu</strong></li>
+<li>tropical dry deciduous forests</li>
+</ul>
+</li>
+<li>Namdapha flying squirrel
+<ul>
+<li><strong>Namdapha Tiger Resserve, Arunachal Pradesh</strong></li>
+<li>tropical forests</li>
+</ul>
+</li>
+<li>Malabar civet
+<ul>
+<li><strong>travancore</strong></li>
+<li>nocturnal</li>
+</ul>
+</li>
+<li>Sumatran &amp; Javan Rhinoceres
+<ul>
+<li><strong>foothills of himalayas and NE India</strong></li>
+<li>only a small number survive in Java and Vietnam</li>
+</ul>
+</li>
+<li>Kashmir Stag/Hangul
+<ul>
+<li>native to india</li>
+<li><strong>J&amp;K</strong></li>
+</ul>
+</li>
+<li>Himalayan Brown Bear
+<ul>
+<li><strong>North tibet, far north india, north pak</strong></li>
+<li>Sexual dimorphism</li>
+<li>hibernation in october</li>
+</ul>
+</li>
+<li>Kondana Rat
+<ul>
+<li><strong>pune, maharashtra</strong></li>
+<li>endemic to india</li>
+<li>tropical and sub-tropical dry deciduous forest</li>
+</ul>
+</li>
+</ul>
+
+</body>
+</html>

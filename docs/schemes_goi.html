@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>schemes_goi.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="types">Types</h1>
+<ul>
+<li>Special category states
+<ul>
+<li>8 NE States</li>
+<li>Uttarakhand</li>
+<li>J&amp;K</li>
+<li>Himachal Pradesh</li>
+</ul>
+</li>
+<li>Core of the core
+<ul>
+<li>6</li>
+<li>General category states: Existing pattern</li>
+<li>Special category states: Existing pattern</li>
+</ul>
+</li>
+<li>Core
+<ul>
+<li>18</li>
+<li>General category states: 60:40</li>
+<li>Special category states: 90:10</li>
+</ul>
+</li>
+<li>Optional
+<ul>
+<li>3</li>
+<li>General category states: 50:50</li>
+<li>Special category states: 80:20</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="core-of-the-core">Core of the core</h1>
+<h2 id="classification">Classification</h2>
+<ul>
+<li>MGNREGA</li>
+<li>National Social Awareness Program</li>
+<li>Umbrella Scheme for SC (All schemes for SC in one)</li>
+<li>Umbrella Scheme for ST (All schemes for ST in one)</li>
+<li>Umbrella Scheme for OBC (All schemes for OBC in one)</li>
+<li>Umbrella Scheme for Minorities (All schemes for Minorities in one)</li>
+</ul>
+<hr>
+<h1 id="core">Core</h1>
+<h2 id="classification">Classification</h2>
+<ul>
+<li>Green Revolution
+<ul>
+<li>Krishi Unnati Yojana</li>
+<li>Rashtriya Krishi Vikas Yojana</li>
+</ul>
+</li>
+<li>White Revolution
+<ul>
+<li>Rashtriya Pashudhan Vikas Yojana</li>
+</ul>
+</li>
+<li>Blue Revolution</li>
+<li>Pradhan Mantri Krishi Sinchai Yojana</li>
+<li>Accelerated Irrigation Benefit and Flood Mgtt. Program</li>
+<li>Per Drop More Crop</li>
+<li>Integrated Watershed Dev. Program</li>
+<li>Pradhan Mantri Gram Sadak Yojana</li>
+<li>National Rural Drinking Water Mission</li>
+<li>Swachh Bharat Abhiyan
+<ul>
+<li>SBA - Rural</li>
+<li>SBA - Urban</li>
+</ul>
+</li>
+<li>National Health Mission
+<ul>
+<li>NHM - Rural and Urban Mission</li>
+<li>NHM - Human Resource in Health and Medical Education</li>
+<li>NHM - AYUSH</li>
+</ul>
+</li>
+<li>Rashtriya Shasthya Suraksha Yojana</li>
+<li>National Education Mission
+<ul>
+<li>Sarva Shiksha Abhiyan</li>
+<li>Rashtriya Madhyamik Shiksha Abhiyan</li>
+<li>Teacher's Training and Adult Education</li>
+<li>Rashtriya Ucchatar Shiksha Abhiyan</li>
+</ul>
+</li>
+<li>Mid Day Meals Program</li>
+<li>Integrated Child Development Scheme
+<ul>
+<li>Core ICDS</li>
+<li>NAtional Nutrition Mission</li>
+<li>Maternity Benefits Program</li>
+<li>Scheme for Adolescent Girls</li>
+<li>Integrated Child Protection Schemes</li>
+</ul>
+</li>
+<li>Pradhan Mantri Awas Yojana
+<ul>
+<li>PMAY Rural</li>
+<li>PMAY Urban</li>
+</ul>
+</li>
+<li>Urban Rejuvenation Missions
+<ul>
+<li>SMART Cities</li>
+<li>AMRUT</li>
+</ul>
+</li>
+<li>Modernistaion of Police Forces</li>
+<li>Infrastructure Facilities for Judiciary</li>
+<li>Member of Parliament Local Area Dev. Schemes</li>
+</ul>
+<hr>
+<h1 id="optional">Optional</h1>
+<h2 id="classification">Classification</h2>
+<ul>
+<li>Border Area Development Program</li>
+<li>National River Conservation Plan</li>
+<li>Shyama Prasad Mukherjee RURBAN Mission</li>
+</ul>
+<hr>
+<h1 id="ministry-of-agriculture">Ministry of Agriculture</h1>
+<h2 id="pradhan-mantri-fasal-bima-yojana">Pradhan Mantri Fasal Bima Yojana</h2>
+<ul>
+<li>Budget 2018 increased allocation to Rs. 13000 crore</li>
+<li>comprehensive insurance coverage against crop loss</li>
+<li>compulsory for loanee farmers</li>
+<li>premium rate
+<ul>
+<li><strong>1.5% for Rabi</strong></li>
+<li><strong>2% for Kharif</strong></li>
+<li><strong>5% for annual horticultural/commercial crops</strong></li>
+</ul>
+</li>
+<li>no upper limit on gov. subsidy</li>
+<li>post harvest losses also covered</li>
+<li>different from National agricultural insurance scheme (NAIS) and modified NAIS
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>NAIS</th>
+<th>MNAIS</th>
+<th>PMFBY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Premium rates</td>
+<td>Low</td>
+<td>High</td>
+<td>Lower than even NAIS</td>
+</tr>
+<tr>
+<td>One season one premium</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Insurance amount cover</td>
+<td>Full</td>
+<td>Capped</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Localized Risk coverage</td>
+<td>No</td>
+<td>Hail storm, Land slides</td>
+<td>Hail storm, Land slides</td>
+</tr>
+<tr>
+<td>Post harvest losses coverage</td>
+<td>No</td>
+<td>Coastal areas-for cyclonic rain</td>
+<td>cyclonic rain and seasonal rain</td>
+</tr>
+<tr>
+<td>Use of technology</td>
+<td>No</td>
+<td>Intended</td>
+<td>Mandatory</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="soil-health-card-scheme">Soil Health Card Scheme</h2>
+<ul>
+<li>launched in 2015 in Rajasthan</li>
+<li>this card informs farmers about nutrients status of the soils along with the recommendation on appropriate dosage of nutrients to improve soil health and fertility</li>
+<li>card will be issued once <strong>every 3 years</strong> to a farm so that nutrients deficiency can be regularly detected and improved</li>
+<li>aim is to provide SHC to all 120 million farm holdings by Dec. 2017</li>
+</ul>
+<h2 id="paramparagat-krishi-vikas-yojana">Paramparagat Krishi Vikas Yojana</h2>
+<ul>
+<li>promote organic farming</li>
+<li>products will be linked with the market</li>
+<li>no liability for farmers for expenditure on certification</li>
+</ul>
+<h2 id="e-national-agricultural-market">E-National Agricultural Market</h2>
+<ul>
+<li>Rashtriya Krishi Bazaar</li>
+<li>pan-india electronic trading portal which network existing APMC</li>
+<li>NAM is a virtual market but it is connected to a physical market at the back end and promotes genuine price discovery</li>
+<li>funded by <strong>Agri-Tech Infrastructure Fund</strong> set up through Small Farmers Agribusiness Consortium</li>
+</ul>
+<h2 id="national-food-securities-mission">National Food Securities Mission</h2>
+<ul>
+<li>launched to enhance production of
+<ul>
+<li>rice</li>
+<li>wheat</li>
+<li>pulses</li>
+<li>coarse cereals</li>
+<li>commercial crops (cotton, jute and sugarcane)</li>
+</ul>
+</li>
+<li>funding
+<ul>
+<li>50:50 for food crops</li>
+<li>100:0 for cash crops</li>
+</ul>
+</li>
+<li>implemented through cluster demonstration, distribution of high yield seeds with farm mechanization and integrated pest management</li>
+<li><strong>National Food Securities Act is different and is administered by Ministry of Consumer Affairs</strong></li>
+</ul>
+<h2 id="pradhan-mantri-krishi-sinchayee-yojana">Pradhan Mantri Krishi Sinchayee Yojana</h2>
+<ul>
+<li>main objective
+<ul>
+<li>extending coverage of irrigation</li>
+<li>improving water use efficiency</li>
+<li>end to end solution on source creation, distribution, management, field application and extension activities</li>
+</ul>
+</li>
+<li>formulated by amalgamating
+<ul>
+<li>Accelerated irrigation benefit program - Ministry of Water Resources, River Development &amp; Ganga Rejuvenation</li>
+<li>Integrated Watershed Management Programme - Department of LAnd Resources, Ministry of rural development</li>
+<li>On Farm Water Mgtt - Department of Agriculture and Cooperation</li>
+</ul>
+</li>
+<li>all structures under the schemes will be <strong>geotagged</strong></li>
+</ul>
+
+</body>
+</html>
